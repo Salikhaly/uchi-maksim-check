@@ -1,0 +1,44 @@
+name: Apply OPONAY design
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  design:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply shared blue design
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          css='<link rel="stylesheet" href="oponay-blue.css">'
+          repl={
+            '#1f6f63':'#1F3A6E','#1F6F63':'#1F3A6E','#e4efec':'#EEF3FA','#E4EFEC':'#EEF3FA',
+            '#656c67':'#5A6472','#656C67':'#5A6472','#e2ddcf':'#E5EAF1','#E2DDCF':'#E5EAF1',
+            '#f5f2ea':'#F5F7FA','#F5F2EA':'#F5F7FA','#fbf9f4':'#FFFFFF','#FBF9F4':'#FFFFFF',
+            '#f5e6d3':'#F5F7FA','#F5E6D3':'#F5F7FA','#b96a22':'#2E5AAC','#B96A22':'#2E5AAC',
+            '#1c201e':'#1A1A1A','#1C201E':'#1A1A1A','#111827':'#1A1A1A','#17212b':'#1A1A1A',
+            '#2563eb':'#2E5AAC','#007bff':'#1F3A6E','#0056b3':'#152A52','#17a2b8':'#2E5AAC','#28a745':'#1F3A6E',
+            '#f3f5f7':'#F5F7FA','#f4f6f8':'#F5F7FA','#f0f0f0':'#F5F7FA','#e5e7eb':'#E5EAF1',
+            '#dbe4ef':'#E5EAF1','#aeb8c7':'#5A6472','#6b7280':'#5A6472','#9ca3af':'#5A6472',
+            '#eff6ff':'#EEF3FA','#f7f7f7':'#F5F7FA','#cfe2ff':'#EEF3FA','#084298':'#1F3A6E'
+          }
+          for p in Path('.').glob('*.html'):
+            s=p.read_text(encoding='utf-8')
+            old=s
+            for a,b in repl.items(): s=s.replace(a,b)
+            if 'oponay-blue.css' not in s and '</head>' in s:
+              s=s.replace('</head>',css+'</head>',1)
+            if s!=old:
+              p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "OPONAY Design Bot"
+          git config user.email "actions@github.com"
+          git add '*.html' 'oponay-blue.css'
+          git diff --cached --quiet || git commit -m "Apply OPONAY blue design system to all pages"
+          git push
