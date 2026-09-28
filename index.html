@@ -1,1 +1,126 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPONAY — Академия продаж</title><link rel="stylesheet" href="academy.css"></head><body><header class="topbar"><a class="brand" href="index.html">OPONAY</a><nav class="toplinks"><a href="1.0.html">01 Звонок</a><a href="spin.html">02 СПИН</a><a href="spv.html">03 СПВ</a><a href="meeting.html">04 Встреча</a><a href="objections.html">05 Возражения</a><a href="meeting.html#sale">06 Продажа</a></nav></header><main class="wrap"><a class="back" href="index.html">← Главная</a><section class="hero"><div class="eyebrow">Академия продаж</div><h1>Маршрут менеджера OPONAY</h1><p>Не листаем Excel. Менеджер идёт по понятному маршруту: <b>звонок → СПИН → СПВ → встреча → возражения → продажа</b>. На каждом этапе видно цель, что делать и как понять, что можно идти дальше.</p></section><section class="section"><h2>Рабочий маршрут</h2><p>Открывай нужный этап напрямую. Рабочий звонок открывается отдельной страницей — исходный <b>1.0.html</b> сохранён.</p><div class="route"><a href="1.0.html"><span class="num">01</span><strong>📞 Холодный звонок</strong><span>Полный рабочий диалог. Внутри только звонок и возврат на главную.</span></a><a href="spin.html"><span class="num">02</span><strong>🎓 СПИН + боли</strong><span>Ситуация → проблема → извлечение → наведение. Боль фиксируем до решения.</span></a><a href="spv.html"><span class="num">03</span><strong>🧩 СПВ</strong><span>Каждое решение разобрано: проблема → свойство → преимущество → выгода → ключевая ценность → фраза клиенту.</span></a><a href="meeting.html"><span class="num">04</span><strong>🤝 Встреча</strong><span>Каждый этап встречи отдельно, с целью, пониманием и рабочими формулировками.</span></a><a href="objections.html"><span class="num">05</span><strong>🛡 Возражения</strong><span>Отдельная база. Пока не смешиваем её с основным маршрутом встречи.</span></a><a href="meeting.html#sale"><span class="num">06</span><strong>💼 Продажа и закрытие</strong><span>Ценность → цена → условия → закрывающий вопрос → оформление.</span></a></div></section><section class="section"><h2>Как понимать маршрут</h2><div class="flow"><div><b>1</b><span>Сначала</span><em>Понять текущую ситуацию клиента.</em></div><div><b>2</b><span>Потом</span><em>Найти подтверждённую проблему и последствия.</em></div><div><b>3</b><span>После</span><em>Показать только релевантное СПВ.</em></div><div><b>4</b><span>В конце</span><em>Собрать ценность и перейти к следующему шагу.</em></div></div></section><div class="footer">OPONAY · рабочая академия менеджера</div></main></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OPONAY — обучение менеджера</title>
+<style>
+:root{--bg:#F5F7FA;--panel:#fff;--text:#1A1A1A;--muted:#5A6472;--line:#E5EAF1;--accent:#1A1A1A;--green:#16855b;--orange:#d97706;--blue:#2E5AAC}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.top{height:68px;background:#1A1A1A;color:#fff;display:flex;align-items:center;padding:0 22px;gap:18px;position:sticky;top:0;z-index:50;box-shadow:0 2px 14px #0002}
+.logo{font-weight:800;font-size:20px;letter-spacing:.3px}.sub{color:#5A6472;font-size:13px}
+.nav{margin-left:auto;display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav button{border:1px solid #ffffff20;background:#ffffff0d;color:#fff;border-radius:10px;padding:9px 12px;cursor:pointer;font-weight:700}.nav button.active{background:#fff;color:#1A1A1A}
+.page{display:none}.page.active{display:block}
+.old-wrap{height:calc(100vh - 68px);min-height:0}.old-wrap iframe{width:100%;height:100%;border:0;background:#fff}
+.training{max-width:1250px;margin:0 auto;padding:26px}
+.hero{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 5px 25px #00000008}
+.hero h1{margin:0 0 8px;font-size:30px}.hero p{margin:0;color:var(--muted);line-height:1.5}
+.path{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:18px 0}
+.step{border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;cursor:pointer;text-align:left}.step b{display:block;font-size:13px}.step span{display:block;color:var(--muted);font-size:12px;margin-top:5px}.step.current{border-color:#1A1A1A;box-shadow:0 0 0 2px #1A1A1A10}
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.card h2{margin:0 0 14px;font-size:20px}.hint{color:var(--muted);font-size:13px}
+.spv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.spv div{border:1px solid var(--line);border-radius:12px;padding:14px}.spv strong{display:block;margin-bottom:6px}.benefit{border-color:#a7e2c9!important;background:#f2fbf7}
+.lesson{margin-top:14px;border:1px solid var(--line);border-radius:12px;padding:15px}.lesson h3{margin:0 0 7px;font-size:16px}.lesson p{margin:0;line-height:1.5}
+button.action{background:#1A1A1A;color:white;border:0;border-radius:10px;padding:11px 14px;cursor:pointer;font-weight:700}.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.quiz{display:none}.quiz.active{display:block}.q{font-weight:800;margin:14px 0 9px}.answers{display:grid;gap:8px}.answers button{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px;text-align:left;cursor:pointer}.answers button:hover{border-color:#1A1A1A}.result{margin-top:12px;font-weight:700}
+iframe.training-frame{width:100%;height:calc(100vh - 110px);border:0;background:white;border-radius:16px}
+@media(max-width:900px){.path{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.spv{grid-template-columns:1fr}.top{height:auto;min-height:68px;padding:10px 12px}.nav{margin-left:0;width:100%}.old-wrap{height:calc(100vh - 105px)}}
+</style>
+<style id="oponay-blue-system">:root{--primary:#1F3A6E!important;--dark:#152A52!important;--accent:#2E5AAC!important;--background:#FFFFFF!important;--light:#F5F7FA!important;--text-primary:#1A1A1A!important;--text-secondary:#5A6472!important;--line:#E5EAF1!important;--shadow:0 4px 20px rgba(31,58,110,.08)!important}body{background:var(--background)!important;color:var(--text-primary)!important}header{background:#fff!important;color:var(--text-primary)!important;border-color:var(--line)!important;box-shadow:0 2px 14px rgba(31,58,110,.05)}nav a,.nav a{color:var(--text-secondary)!important}nav a:hover,.nav a:hover,nav a.active,.nav a.active{background:#EEF3FA!important;color:var(--primary)!important}.hero,.panel,.card,.lesson,.block,.box,section,details{border-color:var(--line)!important;box-shadow:var(--shadow)}h1,h2,h3,.logo{color:var(--primary)!important}p,li,small,.muted{color:var(--text-secondary)}button,.btn,.primary{border-radius:10px!important}.primary,button.primary{background:var(--primary)!important;color:#fff!important}.secondary{background:#fff!important;color:var(--primary)!important;border:2px solid var(--primary)!important}input,textarea,select{background:#F5F7FA!important;border-color:var(--line)!important;color:var(--text-primary)!important;border-radius:10px!important}details{background:#fff!important}summary{color:var(--text-primary)!important}.accent,.kicker,.eyebrow{color:var(--accent)!important}.section.light,section{background:#F5F7FA}.pill,.tag{background:#EEF3FA!important;color:var(--primary)!important}@media(max-width:700px){body{overflow-x:hidden}main{max-width:100%!important}.grid,.cards,.feature-grid{grid-template-columns:1fr!important}.nav,nav{overflow-x:auto;-webkit-overflow-scrolling:touch}.nav a,nav a{white-space:nowrap}.hero{padding:22px!important}h1{font-size:clamp(34px,9vw,48px)!important}h2{font-size:clamp(26px,7vw,36px)!important}}</style><link rel="stylesheet" href="p0-ui.css"><link rel="stylesheet" href="p1-ui.css"><link rel="stylesheet" href="oponay-qa.css"></head>
+<body><div id="p0-app" data-p0-page="home"></div>
+<header class="top">
+  <div class="logo">OPONAY</div>
+  <div class="sub">Скрипт продаж · обучение менеджера</div>
+  <nav class="nav">
+    <button class="active" data-page="call">📞 Холодный звонок</button>
+    <button data-page="learn">🎓 СПИН-обучение</button>
+    <button data-page="spv">🧩 СПВ</button>
+    <button data-page="meeting">🤝 Встреча</button>
+    <button data-page="objections">🛡 Возражения</button>
+  </nav>
+</header>
+
+<section id="call" class="page active">
+  <div class="old-wrap"><iframe src="1.0.html" title="Оригинальный скрипт OPONAY"></iframe></div>
+</section>
+
+
+
+<section id="learn" class="page">
+<div class="training">
+  <div class="hero">
+    <h1>🎓 СПИН — ведём клиента за руку</h1>
+    <p>Не набор разрозненных вариантов. Один последовательный маршрут: <b>Ситуация → Проблема → Извлечение → Наведение → СПВ → следующий шаг.</b> Каждый следующий вопрос появляется только после предыдущего.</p>
+  </div>
+  <div class="path">
+    <button class="step current" onclick="lesson(0)"><b>1. С · Ситуация</b><span>Понять, как сейчас</span></button>
+    <button class="step" onclick="lesson(1)"><b>2. П · Проблема</b><span>Найти сложность</span></button>
+    <button class="step" onclick="lesson(2)"><b>3. И · Извлечение</b><span>Понять последствия</span></button>
+    <button class="step" onclick="lesson(3)"><b>4. Н · Наведение</b><span>Определить желаемый результат</span></button>
+    <button class="step" onclick="lesson(4)"><b>5. СПВ</b><span>Показать только нужное</span></button>
+    <button class="step" onclick="lesson(5)"><b>6. Следующий шаг</b><span>Встреча / решение</span></button>
+  </div>
+  <div class="lesson" id="lesson0"><h3>1. С · Ситуация</h3><p><b>Главный вопрос:</b> «Как сейчас ведёте учёт и контролируете магазин?»</p><p class="hint"><b>Слушаем:</b> чем пользуется клиент, кто отвечает, как контролирует деньги/товар/сотрудников.</p><p class="hint"><b>Переход:</b> когда понял текущую систему — не продаём. Переходим к поиску проблемы.</p></div>
+  <div class="lesson" id="lesson1" style="display:none"><h3>2. П · Проблема</h3><p><b>Главный вопрос:</b> «Где сейчас возникают сложности или что хотелось бы делать удобнее?»</p><p class="hint"><b>Слушаем:</b> недостачи, потеря времени, отсутствие контроля, ошибки, зависимость от сотрудников, проблемы с товаром/деньгами.</p><p class="hint"><b>Переход:</b> клиент назвал проблему → не предлагаем решение. Сначала выясняем, к чему она приводит.</p></div>
+  <div class="lesson" id="lesson2" style="display:none"><h3>3. И · Извлечение</h3><p><b>Главный вопрос:</b> «Что происходит из-за этого? К чему это приводит по деньгам, времени или контролю?»</p><p class="hint"><b>Слушаем:</b> последствия проблемы и её реальную цену для бизнеса.</p><p class="hint"><b>Переход:</b> появилась понятная цена проблемы → теперь можно спросить про желаемое состояние.</p></div>
+  <div class="lesson" id="lesson3" style="display:none"><h3>4. Н · Наведение</h3><p><b>Главный вопрос:</b> «Если это решить, что для вас изменится и какой результат был бы важен?»</p><p class="hint"><b>Слушаем:</b> что клиент хочет получить: контроль, экономию времени, меньше потерь, рост, спокойствие собственника.</p><p class="hint"><b>Переход:</b> теперь у нас есть связка <b>проблема → последствия → желаемый результат</b>. Только здесь выбираем решение.</p></div>
+  <div class="lesson" id="lesson4" style="display:none"><h3>5. СПВ — только под найденную боль</h3><div class="spv"><div><strong>Свойство</strong>Что умеет решение.</div><div><strong>Преимущество</strong>Как это меняет работу клиента.</div><div class="benefit"><strong>Выгода</strong>Какой результат получает именно этот клиент.</div></div><p class="hint" style="margin-top:12px"><b>Правило:</b> не показываем весь функционал. Берём только ту функцию, которая закрывает проблему, которую клиент сам назвал.</p></div>
+  <div class="lesson" id="lesson5" style="display:none"><h3>6. Следующий шаг</h3><p>В холодном звонке после диагностики цель — <b>назначить встречу</b>. На встрече маршрут продолжается: диагностика → боль → СПВ → ценность → цена/следующий шаг.</p><div class="actions"><button class="action" onclick="document.querySelector('[data-page=call]').click()">← Вернуться в холодный звонок</button><button class="action" onclick="document.querySelector('[data-page=meeting]').click()">Перейти к встрече →</button></div></div>
+  <div class="card" style="margin-top:18px"><h2>🧭 Как менеджер понимает, куда идти</h2><div class="lesson"><p><b>Клиент ответил → мы не выбираем случайную заготовку.</b></p><p class="hint">1) Определили ситуацию → 2) нашли проблему → 3) раскрыли последствия → 4) выяснили желаемый результат → 5) подобрали СПВ → 6) назначили следующий шаг.</p></div></div>
+</div>
+</section>
+
+<section id="spv" class="page"><div class="training"><div class="hero"><h1>🧩 СПВ — отдельный модуль</h1><p>Здесь менеджер учится не перечислять функции, а связывать каждую функцию с конкретной болью и измеримой выгодой.</p></div><div style="margin-top:18px"><iframe class="training-frame" src="spv-source.html" title="СПВ и обучение"></iframe></div></div></section>
+
+<section id="meeting" class="page"><div class="training"><div class="hero"><h1>🤝 Встреча</h1><p><b>Возражения не смешиваем со встречей.</b> Встреча ведётся по диагностической логике.</p></div><div class="grid"><div class="card"><h2>Маршрут встречи</h2><div class="lesson"><h3>1. Приветствие</h3><p>Знакомство → ТМР → озвучить план встречи.</p></div><div class="lesson"><h3>2. Диагностика</h3><p>2–5 вопросов по бизнесу без допроса.</p></div><div class="lesson"><h3>3. Боль</h3><p>Найти конкретную проблему и последствия.</p></div><div class="lesson"><h3>4. СПВ</h3><p>Показываем только функции, которые закрывают найденную боль.</p></div><div class="lesson"><h3>5. Ценность</h3><p>Собираем результат: меньше потерь, больше контроля, экономия времени, рост.</p></div><div class="lesson"><h3>6. Цена</h3><p>Переходим к цене после того, как клиент понял ценность.</p></div></div><div class="card"><h2>Правило менеджера</h2><p class="hint">Если клиент сказал: «У меня проблема с кассой» — не отвечаем списком из 20 функций.</p><div class="spv"><div><strong>Свойство</strong>Внесения и снятия денег фиксируются.</div><div><strong>Преимущество</strong>Видно движение денег и остаток кассы.</div><div class="benefit"><strong>Выгода</strong>Легче заметить расхождения, снизить риск кассовых разрывов и контролировать деньги.</div></div></div></div></div></section>
+
+<section id="objections" class="page"><div class="training"><div class="hero"><h1>🛡 Возражения</h1><p>Отдельный блок. Их учим отдельно и наизусть. Старые формулировки из рабочего скрипта не удалены.</p><div class="actions"><button class="action" onclick="document.querySelector('[data-page=call]').click()">Открыть старый скрипт → Возражения</button></div></div></div></section>
+
+<script>
+const buttons=[...document.querySelectorAll('.nav button')];
+buttons.forEach(b=>b.onclick=()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(b.dataset.page).classList.add('active');});
+function lesson(n){for(let i=0;i<6;i++){const e=document.getElementById('lesson'+i);if(e)e.style.display=i===n?'block':'none';}document.querySelectorAll('.step').forEach((e,i)=>e.classList.toggle('current',i===n));}
+let qi=1,score=0;
+function answer(ok){if(ok)score++;document.getElementById('quizResult').textContent='Правильных ответов: '+score;const cur=document.getElementById('q'+qi);if(cur)cur.style.display='none';qi++;const next=document.getElementById('q'+qi);if(next)next.style.display='block';else document.getElementById('quizResult').textContent='Готово. Результат: '+score+'/3';}
+</script>
+<script src="p0-data.js"></script><script src="p0-app.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('oponay-runtime');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) document.documentElement.classList.add('oponay-reduced-motion');
+
+  // Current-page marker for any shared step navigation.
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('a[href]').forEach(a=>{
+    const raw=(a.getAttribute('href')||'').split('#')[0];
+    if(raw && raw===here) a.classList.add('oponay-current');
+  });
+
+  // Close native details cards when another card in the same group opens.
+  document.querySelectorAll('[data-single-open]').forEach(group=>{
+    group.addEventListener('toggle', e=>{
+      if(!group.open) return;
+      document.querySelectorAll('[data-single-open]').forEach(x=>{
+        if(x!==group) x.removeAttribute('open');
+      });
+    });
+  });
+
+  // Escape closes open details and returns focus to the trigger.
+  document.addEventListener('keydown', e=>{
+    if(e.key!=='Escape') return;
+    const open=[...document.querySelectorAll('details[open]')];
+    if(open.length){ open.forEach(d=>d.removeAttribute('open')); }
+  });
+
+  // External hash navigation should land below sticky header.
+  if(location.hash){
+    requestAnimationFrame(()=>{
+      const el=document.querySelector(location.hash);
+      if(el) el.scrollIntoView({block:'start'});
+    });
+  }
+})();
+</script>
+</body>
+</html>
