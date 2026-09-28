@@ -43,33 +43,6 @@
         flex-direction: column;
       }
       #dialogContainer h2 { margin: 0 0 12px; font-size: 19px; line-height: 1.25; }
-      .spin-guide {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 7px;
-        margin-bottom: 10px;
-      }
-      .spin-step {
-        border: 1px solid var(--line);
-        border-radius: 10px;
-        padding: 8px 9px;
-        background: #fafafa;
-      }
-      .spin-step b { display:block; font-size:12px; }
-      .spin-step span { display:block; color:var(--muted); font-size:11px; margin-top:2px; }
-      .spin-step.active { border-color: var(--blue); background: var(--blue-soft); }
-      .spin-coach {
-        border: 1px solid #bfdbfe;
-        background: var(--blue-soft);
-        border-radius: 12px;
-        padding: 10px 12px;
-        margin-bottom: 10px;
-      }
-      .spin-coach strong { display:block; font-size:12px; margin-bottom:4px; }
-      .spin-coach .question { font-size:14px; font-weight:700; line-height:1.35; }
-      .spin-coach .listen { color:var(--muted); font-size:11px; margin-top:4px; }
-      .spin-next { margin-top:7px; border:0; border-radius:8px; padding:7px 10px; background:#1A1A1A; color:#fff; font-weight:700; cursor:pointer; }
-
       .side-window {
         padding: 18px;
         display: flex;
@@ -92,7 +65,7 @@
         min-height: 120px;
         overflow-y: auto;
         margin-bottom: 10px;
-        background-color: #F5F7FA;
+        background-color: #f7f7f7;
         padding: 12px;
         border-radius: 10px;
       }
@@ -101,7 +74,7 @@
         min-height: 120px;
         overflow-y: auto;
         margin-bottom: 10px;
-        background-color: #F5F7FA;
+        background-color: #f7f7f7;
         padding: 12px;
         border-radius: 10px;
       }
@@ -117,8 +90,8 @@
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
-        background-color: #EEF3FA;
-        color: #1F3A6E;
+        background-color: #cfe2ff;
+        color: #084298;
         text-align: right;
       }
       .option, .side-option {
@@ -174,10 +147,10 @@
         background-color: #218838;
       }
       .nav-button.back {
-        background-color: #2E5AAC;
+        background-color: #17a2b8;
       }
       .nav-button.start {
-        background-color: #1F3A6E;
+        background-color: #28a745;
       }
       .nav-button.back:hover {
         background-color: #138496;
@@ -201,7 +174,6 @@
         #dialogContainer, .side-window { height:auto; min-height:0; margin-bottom:10px; }
         #dialogContainer { min-height:calc(100vh - 16px); }
         .dialog-history, .side-history { max-height:38vh; min-height:120px; flex:none; }
-        .spin-guide { grid-template-columns:repeat(2,1fr); }
         .side-window { min-height:360px; }
       }
 
@@ -223,25 +195,18 @@
         #dialogContainer h2 { font-size: 18px; }
         .option, .side-option { min-height: 46px; font-size: 14px; }
       }
-    </style>
-  <style id="oponay-blue-system">:root{--primary:#1F3A6E!important;--dark:#152A52!important;--accent:#2E5AAC!important;--background:#FFFFFF!important;--light:#F5F7FA!important;--text-primary:#1A1A1A!important;--text-secondary:#5A6472!important;--line:#E5EAF1!important;--shadow:0 4px 20px rgba(31,58,110,.08)!important}body{background:var(--background)!important;color:var(--text-primary)!important}header{background:#fff!important;color:var(--text-primary)!important;border-color:var(--line)!important;box-shadow:0 2px 14px rgba(31,58,110,.05)}nav a,.nav a{color:var(--text-secondary)!important}nav a:hover,.nav a:hover,nav a.active,.nav a.active{background:#EEF3FA!important;color:var(--primary)!important}.hero,.panel,.card,.lesson,.block,.box,section,details{border-color:var(--line)!important;box-shadow:var(--shadow)}h1,h2,h3,.logo{color:var(--primary)!important}p,li,small,.muted{color:var(--text-secondary)}button,.btn,.primary{border-radius:10px!important}.primary,button.primary{background:var(--primary)!important;color:#fff!important}.secondary{background:#fff!important;color:var(--primary)!important;border:2px solid var(--primary)!important}input,textarea,select{background:#F5F7FA!important;border-color:var(--line)!important;color:var(--text-primary)!important;border-radius:10px!important}details{background:#fff!important}summary{color:var(--text-primary)!important}.accent,.kicker,.eyebrow{color:var(--accent)!important}.section.light,section{background:#F5F7FA}.pill,.tag{background:#EEF3FA!important;color:var(--primary)!important}@media(max-width:700px){body{overflow-x:hidden}main{max-width:100%!important}.grid,.cards,.feature-grid{grid-template-columns:1fr!important}.nav,nav{overflow-x:auto;-webkit-overflow-scrolling:touch}.nav a,nav a{white-space:nowrap}.hero{padding:22px!important}h1{font-size:clamp(34px,9vw,48px)!important}h2{font-size:clamp(26px,7vw,36px)!important}}</style><link rel="stylesheet" href="oponay-blue.css"></head>
+    
+      .call-top{grid-column:1/-1;height:42px;display:flex;align-items:center;gap:14px;padding:0 4px;color:var(--muted);font-size:13px}.call-top a{color:var(--blue);font-weight:800;text-decoration:none}.call-top strong{color:var(--blue);font-size:15px}.call-top span{color:var(--muted)}
+      body{grid-template-rows:42px minmax(0,1fr)}
+      @media(max-width:900px){body{grid-template-rows:auto;}.call-top{grid-column:auto}}
+</style>
+  <style id="oponay-blue-system">:root{--primary:#1F3A6E!important;--dark:#152A52!important;--accent:#2E5AAC!important;--background:#FFFFFF!important;--light:#F5F7FA!important;--text-primary:#1A1A1A!important;--text-secondary:#5A6472!important;--line:#E5EAF1!important;--shadow:0 4px 20px rgba(31,58,110,.08)!important}body{background:var(--background)!important;color:var(--text-primary)!important}header{background:#fff!important;color:var(--text-primary)!important;border-color:var(--line)!important;box-shadow:0 2px 14px rgba(31,58,110,.05)}nav a,.nav a{color:var(--text-secondary)!important}nav a:hover,.nav a:hover,nav a.active,.nav a.active{background:#EEF3FA!important;color:var(--primary)!important}.hero,.panel,.card,.lesson,.block,.box,section,details{border-color:var(--line)!important;box-shadow:var(--shadow)}h1,h2,h3,.logo{color:var(--primary)!important}p,li,small,.muted{color:var(--text-secondary)}button,.btn,.primary{border-radius:10px!important}.primary,button.primary{background:var(--primary)!important;color:#fff!important}.secondary{background:#fff!important;color:var(--primary)!important;border:2px solid var(--primary)!important}input,textarea,select{background:#F5F7FA!important;border-color:var(--line)!important;color:var(--text-primary)!important;border-radius:10px!important}details{background:#fff!important}summary{color:var(--text-primary)!important}.accent,.kicker,.eyebrow{color:var(--accent)!important}.section.light,section{background:#F5F7FA}.pill,.tag{background:#EEF3FA!important;color:var(--primary)!important}@media(max-width:700px){body{overflow-x:hidden}main{max-width:100%!important}.grid,.cards,.feature-grid{grid-template-columns:1fr!important}.nav,nav{overflow-x:auto;-webkit-overflow-scrolling:touch}.nav a,nav a{white-space:nowrap}.hero{padding:22px!important}h1{font-size:clamp(34px,9vw,48px)!important}h2{font-size:clamp(26px,7vw,36px)!important}}</style></head>
 
   <body>
+    <div class="call-top"><a href="index.html">← Академия</a><strong>📞 Холодный звонок</strong><span>Рабочий скрипт 1.0</span></div>
     <div id="dialogContainer">
-      <h2>Холодный звонок — ведём клиента по СПИН, а не перебираем варианты</h2>
-      <div class="spin-guide" id="spinGuide">
-        <div class="spin-step active"><b>С · Ситуация</b><span>Как сейчас работает?</span></div>
-        <div class="spin-step"><b>П · Проблема</b><span>Где сложность?</span></div>
-        <div class="spin-step"><b>И · Извлечение</b><span>К чему приводит?</span></div>
-        <div class="spin-step"><b>Н · Наведение</b><span>Что хочет изменить?</span></div>
-      </div>
-      <div class="spin-coach" id="spinCoach">
-        <strong id="spinCoachTitle">Сейчас: Ситуация</strong>
-        <div class="question" id="spinCoachQuestion">Как сейчас ведёте учёт и контролируете магазин?</div>
-        <div class="listen" id="spinCoachListen">Слушаем факты. Не продаём и не перечисляем функции.</div>
-        <button class="spin-next" type="button" onclick="nextSpinStage()">Следующий шаг СПИН →</button>
-      </div>
-      <div class="dialog-history" id="dialogHistory"></div>
+      <h2>Холодный звонок — рабочий скрипт OPONAY</h2>
+        <div class="dialog-history" id="dialogHistory"></div>
       <div id="dialogOptions"></div>
       <div class="nav-buttons">
         <button class="nav-button back" onclick="goBack()">Назад</button>
@@ -1245,10 +1210,6 @@
           action: () =>
             side2AddMessage("Выбери потребность", [
               {
-                text: "Вопросы СПИН — по порядку",
-                action: () => showSpinQuestions(),
-              },
-              {
                 text: "Проговорить ответы клиета",
                 action: () =>
                   side2AddMessage(
@@ -1596,47 +1557,7 @@
         });
       }
 
-      function showSpinQuestions(){
-        addSideMessage(2, "СПИН — ведём клиента последовательно. Не задаём все вопросы подряд. Переходим дальше только после ответа клиента.");
-        addSideButtons(2, [
-          {text:"1 · С — Ситуация", action:()=>spinSideStep(2,0)},
-          {text:"2 · П — Проблема", action:()=>spinSideStep(2,1)},
-          {text:"3 · И — Извлечение", action:()=>spinSideStep(2,2)},
-          {text:"4 · Н — Наведение", action:()=>spinSideStep(2,3)},
-          {text:"→ СПВ после Н", action:()=>spinSideStep(2,4)}
-        ]);
-      }
-      function spinSideStep(windowNumber, step){
-        const steps=[
-          ["С · Ситуация", "Как сейчас ведёте учёт и контролируете магазин?", "Слушаем факты: чем пользуется, кто отвечает, как контролирует."],
-          ["П · Проблема", "Где сейчас возникают сложности или что хотелось бы делать удобнее?", "Слушаем конкретную проблему. Не предлагаем решение раньше времени."],
-          ["И · Извлечение", "Что происходит из-за этой проблемы? К чему она приводит по деньгам, времени или контролю?", "Раскрываем последствия и цену проблемы."],
-          ["Н · Наведение", "Если это решить, что для вас изменится и какой результат был бы важен?", "Фиксируем желаемый результат клиента."],
-          ["СПВ", "Теперь показываем только ту функцию, которая закрывает найденную проблему.", "Свойство → преимущество → выгода именно для этого клиента."]
-        ];
-        const x=steps[step];
-        addSideMessage(windowNumber, x[0]+"\n\nВопрос: "+x[1]+"\n\nСлушаем: "+x[2]);
-        if(step<4){ addSideButtons(windowNumber,[{text:"Ответ получил → следующий шаг",action:()=>spinSideStep(windowNumber,step+1)}]); }
-        else { addSideButtons(windowNumber,[{text:"Вернуться к началу СПИН",action:()=>showSpinQuestions()}]); }
-      }
-
-      const spinStages = [
-        {title:'Сейчас: Ситуация', question:'Как сейчас ведёте учёт и контролируете магазин?', listen:'Слушаем факты. Не продаём и не перечисляем функции.'},
-        {title:'Дальше: Проблема', question:'Где сейчас возникают сложности или что хотелось бы делать удобнее?', listen:'Ищем конкретную проблему клиента, а не угадываем её за него.'},
-        {title:'Дальше: Извлечение', question:'Что происходит из-за этой проблемы? К чему она приводит по деньгам, времени или контролю?', listen:'Углубляем боль: последствия должны прозвучать от клиента.'},
-        {title:'Дальше: Наведение', question:'Если это решить, что для вас изменится и какой результат был бы важен?', listen:'Фиксируем желаемый результат. Только после этого переходим к нужному решению/встрече.'}
-      ];
-      let spinStage = 0;
-      function renderSpinStage(){
-        const st=spinStages[spinStage];
-        document.getElementById('spinCoachTitle').textContent=st.title;
-        document.getElementById('spinCoachQuestion').textContent=st.question;
-        document.getElementById('spinCoachListen').textContent=st.listen;
-        document.querySelectorAll('.spin-step').forEach((el,i)=>el.classList.toggle('active',i===spinStage));
-      }
-      function nextSpinStage(){ spinStage=Math.min(spinStage+1,spinStages.length-1); renderSpinStage(); }
-
-      // Инициализация диалога
+// Инициализация диалога
       async function startDialog() {
         currentNode = dialogTree.greeting;
         historyStack = [currentNode]; // Начальная история
@@ -1645,7 +1566,6 @@
       }
 
       // Запуск диалога при загрузке
-      renderSpinStage();
       startDialog();
     </script>
   </body>
