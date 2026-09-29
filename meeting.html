@@ -5,355 +5,134 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OPONAY — Встреча</title>
 <style>
-*{box-sizing:border-box}
-:root{
-  --blue:#1f3a6e;--blue2:#2e5aac;--bg:#f5f7fa;--card:#fff;
-  --line:#e2e8f0;--muted:#5a6472;--soft:#eaf0f9;--green:#1F3A6E;
-}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#18202b}
-a{color:inherit}
-main{max-width:1180px;margin:auto;padding:28px 22px 80px}
-.route{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;display:flex;gap:8px;align-items:center;overflow:auto;white-space:nowrap}
-.route a{text-decoration:none;font-weight:800;font-size:13px;color:#586577;padding:9px 11px;border-radius:9px}
-.route a.active{background:var(--soft);color:var(--blue)}
-.hero{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px}
-.kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue2);font-weight:900}
-h1{margin:8px 0 10px;color:var(--blue);font-size:42px;line-height:1.08}
-.lead{margin:0;color:var(--muted);font-size:17px;line-height:1.6;max-width:950px}
-.rule{margin-top:20px;padding:16px 18px;border-left:4px solid var(--blue);background:#f7f9fc;line-height:1.55;font-weight:700}
-.timeline{display:grid;grid-template-columns:repeat(7,1fr);margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.timeline a{text-decoration:none;padding:15px 12px;border-right:1px solid var(--line);font-weight:800;color:#536071;font-size:13px;line-height:1.35}
-.timeline a:last-child{border-right:0}
-.timeline a:hover{background:var(--soft);color:var(--blue)}
-.stage{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.stage-head{padding:22px 24px;background:linear-gradient(90deg,#fff,#f7f9fc);border-bottom:1px solid var(--line)}
-.stage-num{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue2);font-weight:900}
-.stage h2{margin:6px 0 4px;color:var(--blue);font-size:26px}
-.stage-sub{margin:0;color:var(--muted);line-height:1.5}
-.body{padding:22px 24px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.box{border:1px solid var(--line);border-radius:13px;padding:16px;background:#fff}
-.box h3{margin:0 0 8px;color:var(--blue);font-size:15px}
-.box p,.box li{line-height:1.55;margin:0;color:#26313f}
-.box ul{margin:7px 0 0;padding-left:20px}
-.speech{margin-top:12px;padding:15px 16px;background:#f7f9fc;border-radius:12px;border-left:4px solid var(--blue2)}
-.speech b{display:block;margin-bottom:6px;color:var(--blue)}
-.expect{background:#f1f8f6;border-left-color:var(--green)}
-.warn{background:#fff7ed;border-left-color:#b45309}
-.stop{background:#fff1f2;border-left-color:#be123c}
-.next{background:#eef4ff;border-left-color:var(--blue)}
-.step{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:14px}
-.step-title{font-weight:900;color:var(--blue);margin-bottom:8px}
-.flow{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.flow span{padding:8px 10px;background:var(--soft);color:var(--blue);border-radius:999px;font-size:12px;font-weight:800}
-details{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#fff}
-summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:900;color:var(--blue)}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";float:right;font-size:20px}
-details[open] summary:after{content:"−"}
-.detail{padding:0 16px 16px;border-top:1px solid var(--line)}
-.price{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-.price .box{text-align:center}
-.price strong{display:block;font-size:22px;color:var(--blue);margin-bottom:5px}
-.footer-note{margin-top:18px;color:var(--muted);font-size:13px;line-height:1.5}
-@media(max-width:900px){
-  .topbar-inner{align-items:flex-start;flex-direction:column}
-  .topnav{margin-left:0}
-  .timeline{grid-template-columns:1fr}
-  .timeline a{border-right:0;border-bottom:1px solid var(--line)}
-  .grid,.price{grid-template-columns:1fr}
-  h1{font-size:34px}
-}
+:root{--bg:#f4f7fb;--panel:#fff;--text:#17243a;--muted:#64748b;--line:#dbe4f0;--blue:#23457d;--blue2:#315b9b;--soft:#eef4fb;--green:#137a55;--greenSoft:#edf8f3;--warn:#9a5a00;--warnSoft:#fff7e8;--danger:#a33a3a;--dangerSoft:#fff1f1;--shadow:0 10px 28px rgba(31,58,110,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;font-size:15px;line-height:1.55}.topbar{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 30px;gap:28px;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(31,58,110,.04)}.brand{font-weight:900;font-size:25px;letter-spacing:.2px;color:var(--blue);text-decoration:none}.toplinks{margin-left:auto;display:flex;gap:5px;align-items:center;overflow:auto;white-space:nowrap}.toplinks a{color:#536176;text-decoration:none;padding:10px 13px;border-radius:12px;font-weight:800}.toplinks a:hover,.toplinks a.active{background:var(--soft);color:var(--blue)}
+.wrap{max-width:1420px;margin:0 auto;padding:26px 28px 70px}.back{display:inline-block;color:var(--blue);font-weight:800;text-decoration:none;margin:0 0 18px}.hero{background:#f8fbff;border:1px solid var(--line);border-radius:22px;padding:34px 38px;box-shadow:var(--shadow)}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);font-weight:900}.hero h1{margin:7px 0 10px;font-size:48px;line-height:1.08;color:var(--blue)}.hero p{margin:0;max-width:1000px;color:#5f6e83;font-size:17px}
+.route{margin:18px 0 24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;display:flex;gap:8px;overflow:auto}.route .r{min-width:160px;padding:12px 14px;border-radius:12px;background:#f8fafc;border:1px solid transparent;font-weight:900;color:#5b687c}.route .r.active{background:var(--soft);color:var(--blue);border-color:#d5e1f2}.route small{display:block;font-weight:600;color:#8290a4;margin-top:2px}
+.layout{display:grid;grid-template-columns:265px minmax(0,1fr);gap:20px;align-items:start}.sidebar{position:sticky;top:92px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px;box-shadow:var(--shadow)}.stage-btn{width:100%;display:grid;grid-template-columns:45px 1fr;gap:10px;align-items:center;text-align:left;background:#fff;border:0;border-radius:13px;padding:11px 10px;cursor:pointer;color:#43516a}.stage-btn:hover{background:#f7faff}.stage-btn.active{background:var(--soft);color:var(--blue)}.stage-btn b{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#edf3fb;color:var(--blue);font-size:12px}.stage-btn.active b{background:var(--blue);color:#fff}.stage-btn strong{font-size:14px}.progressbox{padding:14px 10px 8px;color:#7b8799;font-size:12px}.progress{height:7px;background:#e8eef6;border-radius:99px;overflow:hidden;margin-top:7px}.progress i{display:block;height:100%;width:0;background:var(--blue);border-radius:99px}
+.panel{display:none}.panel.active{display:block}.panel>h2{margin:0;font-size:31px;color:var(--blue)}.lead{color:#637188;margin:7px 0 18px;font-size:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.box{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;box-shadow:var(--shadow)}.box h3{margin:0 0 7px;color:var(--blue);font-size:17px}.box p{margin:0;color:#5d6b7f}.goal{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}.goal>div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}.goal b,.label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#718096;margin-bottom:5px}.goal strong{color:var(--blue)}
+.note{border-left:4px solid var(--blue);background:#fff;padding:14px 16px;border-radius:0 12px 12px 0;margin:14px 0}.good{background:var(--greenSoft);border-color:#b9e6d1}.warn{background:var(--warnSoft);border-color:#f1d49c}.bad{background:var(--dangerSoft);border-color:#f1c7c7}.success{color:var(--green);font-weight:900}.danger{color:var(--danger);font-weight:900}
+.stage-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:12px}.stage-head .status{font-size:12px;color:var(--blue);font-weight:900;background:var(--soft);padding:7px 10px;border-radius:999px;white-space:nowrap}.cards{display:grid;gap:10px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}details summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:900;color:var(--blue);display:flex;align-items:center;justify-content:space-between;gap:12px}details summary::-webkit-details-marker{display:none}details summary:after{content:'+';font-size:22px;font-weight:500;color:#7890b2}details[open] summary:after{content:'−'}.card-body{padding:0 18px 18px;border-top:1px solid var(--line)}.row{padding-top:14px}.row .text{color:#26364e}.row.quote .text{font-size:16px;color:#1d2e49}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:#f8fafc;border:1px solid #e4eaf2;border-radius:12px;padding:12px}.mini b{display:block;color:var(--blue);margin-bottom:4px}.examples{display:grid;grid-template-columns:1fr 1fr;gap:10px}.example{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fbfcfe}.example b{display:block;color:var(--blue);margin-bottom:4px}.transition{margin-top:16px;background:var(--greenSoft);border:1px solid #b9e6d1;border-radius:16px;padding:16px}.transition h3{margin:0 0 7px;color:var(--green)}.transition ul{margin:7px 0 0;padding-left:20px}.mistakes{margin-top:14px;background:var(--dangerSoft);border:1px solid #f1c7c7;border-radius:16px;padding:16px}.mistakes h3{margin:0 0 7px;color:var(--danger)}.mistakes ul{margin:7px 0 0;padding-left:20px}
+.spinchain{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:12px 0}.spinchain div{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-weight:900;color:var(--blue)}.spinchain span{display:block;color:#7b8799;font-size:12px;font-weight:600;margin-top:3px}.checklist{display:grid;gap:8px}.check{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px}.check input{margin-top:4px;accent-color:var(--blue)}
+.footer{margin-top:28px;text-align:center;color:#8a95a5;font-size:12px}
+@media(max-width:1050px){.layout{grid-template-columns:1fr}.sidebar{position:sticky;top:72px;z-index:20;display:flex;overflow:auto}.stage-btn{min-width:180px}.progressbox{display:none}.grid3{grid-template-columns:1fr 1fr}}@media(max-width:760px){.topbar{padding:10px 14px;height:auto;flex-wrap:wrap}.toplinks{width:100%;margin-left:0}.wrap{padding:18px 14px 50px}.hero{padding:25px 22px}.hero h1{font-size:34px}.goal,.grid2,.grid3,.two,.examples,.spinchain{grid-template-columns:1fr}.route{display:none}.stage-head{display:block}.stage-head .status{display:inline-block;margin-top:8px}}
 </style>
-<link rel="stylesheet" href="oponay-blue.css"></head>
+</head>
 <body>
-<main>
-  <div class="route">
-    <a href="index.html">← Академия</a>
-    <a href="call.html">01 Звонок</a>
-    <a href="spin.html">02 СПИН</a>
-    <a href="spv.html">03 СПВ</a>
-    <a class="active" href="meeting.html">04 Встреча</a>
-    <a href="objections.html">05 Возражения</a>
-    <a href="sales-tool.html">06 Продажа</a>
-  </div>
-
-  <section class="hero">
-    <div class="kicker">OPONAY · МАРШРУТ МЕНЕДЖЕРА</div>
-    <h1>Встреча — полный рабочий маршрут</h1>
-    <p class="lead">Менеджер не идёт по чеклисту ради чеклиста. Он понимает, что сейчас делает, зачем это делает, какой ответ должен получить и только после этого переходит дальше.</p>
-    <div class="rule">Главная логика: контакт → план → диагностика СПИН → подтверждённая боль → соответствующий СПВ → подтверждение ценности → цена → возражение при необходимости → конкретный следующий шаг.</div>
-  </section>
-
-  <nav class="timeline">
-    <a href="#s1">01<br>Подготовка</a>
-    <a href="#s2">02<br>Приветствие + ТМР</a>
-    <a href="#s3">03<br>Диагностика СПИН</a>
-    <a href="#s4">04<br>Презентация</a>
-    <a href="#s5">05<br>Цена и продажа</a>
-    <a href="#s6">06<br>Возражение</a>
-    <a href="#s7">07<br>Закрытие</a>
+<header class="topbar">
+  <a class="brand" href="index.html">OPONAY</a>
+  <nav class="toplinks">
+    <a href="1.0.html">01 Звонок</a><a href="spin.html">02 СПИН</a><a href="spv.html">03 СПВ</a><a class="active" href="meeting.html">04 Встреча</a><a href="objections.html">05 Возражения</a><a href="meeting.html#sale">06 Продажа</a>
   </nav>
+</header>
+<main class="wrap">
+<a class="back" href="index.html">← Академия</a>
+<section class="hero">
+  <div class="eyebrow">OPONAY · ЭТАП 04</div>
+  <h1>Встреча — полный рабочий маршрут</h1>
+  <p>Не чеклист ради чеклиста. Менеджер идёт по этапам и понимает <b>зачем он сейчас здесь, что сказать, какой ответ получить и когда можно переходить дальше</b>.</p>
+</section>
+<div class="route">
+  <div class="r active">01 Подготовка<small>готовим встречу</small></div><div class="r">02 Контакт<small>ТМР + план</small></div><div class="r">03 СПИН<small>диагностика</small></div><div class="r">04 Боль → решение<small>подтверждение</small></div><div class="r">05 СПВ<small>точечная презентация</small></div><div class="r">06 Цена<small>ценность → цена</small></div><div class="r">07 Закрытие<small>следующий шаг</small></div>
+</div>
+<div class="layout">
+<aside class="sidebar">
+<button class="stage-btn active" data-stage="prep"><b>01</b><strong>Подготовка</strong></button>
+<button class="stage-btn" data-stage="contact"><b>02</b><strong>Контакт + план</strong></button>
+<button class="stage-btn" data-stage="spin"><b>03</b><strong>Диагностика СПИН</strong></button>
+<button class="stage-btn" data-stage="pain"><b>04</b><strong>Подтверждение боли</strong></button>
+<button class="stage-btn" data-stage="spv"><b>05</b><strong>Презентация через СПВ</strong></button>
+<button class="stage-btn" data-stage="price"><b>06</b><strong>Ценность + цена</strong></button>
+<button class="stage-btn" data-stage="close"><b>07</b><strong>Закрытие</strong></button>
+<div class="progressbox">Чеклист подготовки <span id="check-count">0 / 9</span><div class="progress"><i id="check-bar"></i></div></div>
+</aside>
+<section>
+<div class="panel active" data-panel="prep">
+  <div class="stage-head"><div><h2>01. Подготовка</h2><p class="lead">До встречи менеджер должен прийти уже подготовленным. На встрече не ищем зарядку, договор и цены — занимаемся клиентом.</p></div><span class="status">Готовность до выезда</span></div>
+  <div class="goal"><div><b>Цель</b><strong>Не потерять время встречи на организацию.</strong></div><div><b>Переходим дальше, когда</b>У тебя готов ноутбук, программа, материалы и примерный комплект под клиента.</div></div>
+  <div class="box"><h3>Что проверить</h3><div class="checklist">
+    <label class="check"><input type="checkbox"><span><b>Документы</b><br>Договор, чеклист, листовки.</span></label>
+    <label class="check"><input type="checkbox"><span><b>Оборудование</b><br>Ноутбук заряжен, программа запускается, всё нужное подключается.</span></label>
+    <label class="check"><input type="checkbox"><span><b>Данные клиента</b><br>Добавлены категории/товары, которые пригодятся именно этому бизнесу.</span></label>
+    <label class="check"><input type="checkbox"><span><b>Конкуренты</b><br>Понимаем, с чем клиент может сравнивать: для торговли — Umag, Paloma365, Adishop, Торгософт; для общепита — iiko, r-keeper, Paloma365.</span></label>
+    <label class="check"><input type="checkbox"><span><b>Комплект</b><br>Заранее прикинута стоимость с моноблоком и без него.</span></label>
+  </div></div>
+  <div class="mistakes"><h3>Не допускать</h3><ul><li>приходить и только на месте открывать программу;</li><li>не знать, чем клиент пользуется сейчас;</li><li>показывать функции без связи с его бизнесом;</li><li>не иметь готового расчёта.</li></ul></div>
+  <div class="transition"><h3>Переход к 02</h3><div>Подготовка закончена → идём к клиенту, знакомимся, делаем короткий ТМР и сразу задаём рамку встречи.</div></div>
+</div>
 
-  <section class="stage" id="s1">
-    <div class="stage-head">
-      <div class="stage-num">01 · ПОДГОТОВКА</div>
-      <h2>До встречи менеджер должен прийти уже готовым</h2>
-      <p class="stage-sub">Цель — не вспоминать на месте, что показывать и сколько считать, а заранее понимать клиента и иметь всё необходимое для демонстрации.</p>
-    </div>
-    <div class="body">
-      <div class="grid">
-        <div class="box"><h3>Цель этапа</h3><p>Подготовить встречу под конкретный бизнес и не тратить время клиента на технические и организационные вещи.</p></div>
-        <div class="box"><h3>Что используем</h3><p>Договор, материалы для презентации, ноутбук/оборудование, программу с подготовленными товарами клиента, расчёт возможного комплекта.</p></div>
-        <div class="box"><h3>Что проверить</h3><ul><li>заряжен ли ноутбук;</li><li>запускается ли программа;</li><li>добавлены ли товары/категории клиента;</li><li>готова ли демонстрация;</li><li>примерно просчитан комплект с моноблоком и без.</li></ul></div>
-        <div class="box"><h3>Что знать о клиенте</h3><p>Ниша, текущая программа/учёт, количество точек и сотрудников, известные проблемы из звонка, кто принимает решение.</p></div>
-      </div>
-      <div class="speech warn"><b>Что нельзя забыть</b>Не приезжать и только на месте выяснять, что клиент продаёт, чем пользуется и что ему показывать.</div>
-      <div class="speech next"><b>Переходим дальше, когда</b>Всё технически готово, менеджер понимает контекст клиента и знает, какую задачу нужно проверить на встрече.</div>
-    </div>
-  </section>
+<div class="panel" data-panel="contact">
+  <div class="stage-head"><div><h2>02. Контакт + ТМР + план</h2><p class="lead">Задача этапа — не «поговорить красиво», а снять напряжение и договориться, как пройдёт встреча.</p></div><span class="status">Контакт → диагностика</span></div>
+  <div class="grid2">
+    <details class="card" open><summary>Что сказать при знакомстве</summary><div class="card-body"><div class="row quote"><div class="label">Вариант</div><div class="text">«Добрый день, (имя)! Меня зовут ____, компания OPONAY. Мы с вами созванивались по поводу автоматизации. Договорились о встрече».</div></div><div class="row"><div class="label">Зачем</div><div class="text">Напомнить контекст и показать, что встреча заранее договорена.</div></div></div></details>
+    <details class="card"><summary>ТМР — как говорить нормально</summary><div class="card-body"><div class="examples"><div class="example"><b>По ситуации</b>«Еле доехала — сегодня пробки. У вас обычно здесь так?»</div><div class="example"><b>По бизнесу</b>«У вас большой ассортимент. Давно работаете в таком формате?»</div><div class="example"><b>По месту</b>«Хорошее расположение магазина. Поток здесь стабильный?»</div><div class="example"><b>Главное правило</b>ТМР 1–2 минуты. Если клиент сам раскрывается — слушаем, но не уходим в разговор на 15 минут.</div></div></div></details>
+    <details class="card"><summary>Как озвучить план встречи</summary><div class="card-body"><div class="row quote"><div class="label">Вариант</div><div class="text">«Чтобы не показывать вам лишнего, сначала задам несколько вопросов про то, как сейчас работает бизнес. Потом покажу только те возможности, которые могут быть полезны. В конце обсудим, что из этого вам подходит и какие дальше шаги».</div></div><div class="row"><div class="label">Проверка</div><div class="text">«Подходит такой план?»</div></div></div></details>
+  </div>
+  <div class="transition"><h3>Переход к 03</h3><div>Клиент понимает план и готов отвечать → начинаем диагностику. Если клиент сразу просит «покажите программу», не спорим: объясняем, что сначала 2–5 вопросов, чтобы не показывать лишнее.</div></div>
+  <div class="mistakes"><h3>Ошибки</h3><ul><li>долгий small talk;</li><li>презентация до диагностики;</li><li>«сейчас я вам всё расскажу» без объяснения логики;</li><li>план встречи без согласия клиента.</li></ul></div>
+</div>
 
-  <section class="stage" id="s2">
-    <div class="stage-head">
-      <div class="stage-num">02 · ПРИВЕТСТВИЕ + ТМР</div>
-      <h2>Знакомство, короткий контакт и рамка встречи</h2>
-      <p class="stage-sub">ТМР нужен не для длинного разговора. Его задача — снять напряжение и спокойно перейти к рабочей части.</p>
-    </div>
-    <div class="body">
-      <div class="grid">
-        <div class="box">
-          <h3>Что говорит менеджер</h3>
-          <div class="speech"><b>Знакомство</b>«Добрый день, [имя]. Меня зовут [имя], компания OPONAY. Мы с вами созванивались по поводу автоматизации, договорились на [время]».</div>
-        </div>
-        <div class="box">
-          <h3>ТМР</h3>
-          <p>Короткий естественный комментарий по ситуации: дорога, погода, магазин, ассортимент, расположение. Не нужно превращать это в отдельный разговор.</p>
-        </div>
-      </div>
-      <div class="speech">
-        <b>Как озвучить план</b>
-        «Чтобы не показывать вам всё подряд, сначала задам несколько вопросов и пойму, как сейчас у вас всё устроено. Потом покажу только то, что может быть полезно именно вам. После этого обсудим условия и ваши вопросы».
-      </div>
-      <div class="speech expect"><b>Что ожидаем от клиента</b>Клиент понимает порядок встречи и согласен сначала пройти диагностику, а потом смотреть решение.</div>
-      <div class="speech stop"><b>Ошибка</b>Сразу открывать программу и начинать перечислять функции до того, как понятно, что клиенту вообще нужно.</div>
-      <div class="speech next"><b>Переходим дальше, когда</b>Контакт установлен, план понятен, клиент готов отвечать на вопросы.</div>
-    </div>
-  </section>
+<div class="panel" data-panel="spin">
+  <div class="stage-head"><div><h2>03. Диагностика СПИН</h2><p class="lead">Здесь менеджер не ищет повод рассказать о программе. Он выясняет, <b>как сейчас работает бизнес и где клиент теряет деньги, время, контроль или продажи</b>.</p></div><span class="status">Не продавать → сначала понять</span></div>
+  <div class="spinchain"><div>Ситуация<span>что сейчас</span></div><div>Проблема<span>что не устраивает</span></div><div>Извлечение<span>к чему приводит</span></div><div>Наведение<span>что изменится</span></div></div>
+  <div class="grid2">
+    <details class="card" open><summary>С — Ситуационные вопросы</summary><div class="card-body"><div class="row"><div class="label">Что узнать</div><div class="text">Как сейчас ведёте учёт? Какой программой пользуетесь? Сколько точек? Сколько сотрудников? Как принимаете товар? Как контролируете остатки и продажи?</div></div><div class="row quote"><div class="label">Пример</div><div class="text">«Как вы сейчас понимаете, сколько товара осталось и что продаётся лучше всего?»</div></div></div></details>
+    <details class="card"><summary>П — Проблемные вопросы</summary><div class="card-body"><div class="row"><div class="label">Что ищем</div><div class="text">Конкретную сложность, а не абстрактное «всё нормально».</div></div><div class="row quote"><div class="label">Примеры</div><div class="text">«Что в текущем учёте больше всего неудобно?»<br>«Бывает недостача? Как часто?»<br>«Есть ли товар, который залеживается?»</div></div></div></details>
+    <details class="card"><summary>И — Извлекающие вопросы</summary><div class="card-body"><div class="row"><div class="label">Зачем</div><div class="text">Перевести проблему из «неудобно» в реальное последствие.</div></div><div class="row quote"><div class="label">Примеры</div><div class="text">«Если недостачи будут продолжаться в таком объёме, сколько это может стоить за год?»<br>«Если сотрудники тратят время на ручной поиск, что это забирает у бизнеса?»</div></div></div></details>
+    <details class="card"><summary>Н — Наводящие вопросы</summary><div class="card-body"><div class="row"><div class="label">Зачем</div><div class="text">Помочь клиенту самому сформулировать ценность изменения.</div></div><div class="row quote"><div class="label">Примеры</div><div class="text">«Если продавец сразу видит остаток, что это изменит в работе?»<br>«Если вы будете видеть прибыль и оборот в одном месте, что это даст вам как собственнику?»</div></div></div></details>
+  </div>
+  <div class="note"><b>Главное:</b> не задаём 20 вопросов подряд. Слушаем ответ клиента, уточняем именно его ответ и строим следующий вопрос от него.</div>
+  <div class="transition"><h3>Переход к 04</h3><div>Есть конкретная проблема + клиент признал её последствия. Если проблема не подтверждена — не переходим к презентации.</div></div>
+  <div class="mistakes"><h3>Ошибки</h3><ul><li>допрос по списку;</li><li>самому за клиента называть его проблему;</li><li>после первого проблемного ответа сразу показывать функцию;</li><li>перескакивать к цене.</li></ul></div>
+</div>
 
-  <section class="stage" id="s3">
-    <div class="stage-head">
-      <div class="stage-num">03 · ДИАГНОСТИКА СПИН</div>
-      <h2>Сначала понять ситуацию, потом открывать боль</h2>
-      <p class="stage-sub">СПИН здесь не читается целиком. Менеджер выбирает вопросы по ответам клиента и идёт в ту проблему, которая реально проявилась.</p>
-    </div>
-    <div class="body">
-      <div class="flow">
-        <span>Ситуация</span><span>Проблема</span><span>Последствия</span><span>Наведение</span><span>Резюме боли</span><span>Подтверждение</span>
-      </div>
+<div class="panel" data-panel="pain">
+  <div class="stage-head"><div><h2>04. Подтверждение боли</h2><p class="lead">Перед презентацией фиксируем, что именно клиент хочет изменить. Это мост между СПИН и СПВ.</p></div><span class="status">Боль подтверждена?</span></div>
+  <div class="goal"><div><b>Цель</b><strong>Чтобы клиент сам подтвердил проблему и её последствия.</strong></div><div><b>Переходим к презентации, когда</b>Можно одной фразой назвать проблему клиента и он ответит «да, именно это».</div></div>
+  <details class="card" open><summary>Как резюмировать</summary><div class="card-body"><div class="row quote"><div class="label">Вариант 1</div><div class="text">«Правильно понимаю: сейчас у вас основная сложность — ___, из-за этого вы теряете ___?»</div></div><div class="row quote"><div class="label">Вариант 2</div><div class="text">«То есть вам важно не просто автоматизировать учёт, а убрать именно ___ и перестать терять ___, верно?»</div></div></div></details>
+  <div class="grid2"><div class="box good"><h3>Хороший сигнал</h3><p>«Да», «именно», «да, это у нас постоянно», клиент добавляет подробность сам.</p></div><div class="box bad"><h3>Пока рано</h3><p>«Ну не знаю», «в целом нормально», «просто интересно посмотреть». Сначала уточнить проблему или вернуться к диагностике.</p></div></div>
+  <div class="transition"><h3>Переход к 05</h3><div>Боль подтверждена → показываем только ту часть решения, которая её закрывает. Не открываем каталог из 20 функций.</div></div>
+</div>
 
-      <div class="step">
-        <div class="step-title">С — ситуация</div>
-        <p>Понять, как сейчас устроен учёт и работа бизнеса.</p>
-        <div class="speech"><b>Примеры</b>«Как сейчас ведёте учёт?» · «Какой программой пользуетесь?» · «Сколько у вас точек и сотрудников?» · «Как ведёте базу клиентов?» · «Как контролируете остатки?»</div>
-      </div>
+<div class="panel" data-panel="spv">
+  <div class="stage-head"><div><h2>05. Презентация через СПВ</h2><p class="lead">Не «рассказываем программу». Показываем связь <b>проблема → свойство → преимущество → выгода</b> и сразу проверяем реакцию.</p></div><span class="status">Только релевантное</span></div>
+  <div class="grid3"><div class="box"><h3>Свойство</h3><p>Что именно умеет программа.</p></div><div class="box"><h3>Преимущество</h3><p>Что меняется в работе клиента благодаря этому свойству.</p></div><div class="box good"><h3>Выгода</h3><p>Что получает бизнес: меньше потерь, времени, ошибок или больше контроля/продаж.</p></div></div>
+  <div class="cards" style="margin-top:14px">
+    <details class="card" open><summary>Пример: проблема с остатками</summary><div class="card-body"><div class="two"><div class="mini"><b>Что сказать</b>«Вы говорили, что продавцам приходится вручную искать остатки. Здесь можно видеть наличие прямо из кассовой зоны».</div><div class="mini"><b>Что проверить</b>«Это закрывает ту проблему, о которой вы говорили?»</div></div></div></details>
+    <details class="card"><summary>Пример: контроль сотрудников</summary><div class="card-body"><div class="two"><div class="mini"><b>Что сказать</b>«Вы говорили, что хотите меньше зависеть от постоянного контроля. Здесь видны продажи и результаты сотрудников».</div><div class="mini"><b>Что проверить</b>«Если вы будете видеть это без постоянных звонков сотрудникам, это для вас полезно?»</div></div></div></details>
+    <details class="card"><summary>Пример: залежавшийся товар</summary><div class="card-body"><div class="two"><div class="mini"><b>Что сказать</b>«Вы говорили, что часть товара залеживается. Размерная сетка и остатки помогают точнее понимать, какие позиции и размеры реально двигаются».</div><div class="mini"><b>Что проверить</b>«Если видеть это заранее, вам будет проще управлять закупом?»</div></div></div></details>
+    <details class="card"><summary>Как говорить по-человечески</summary><div class="card-body"><div class="row"><div class="text">Не читать техническое описание. Сначала напомнить, что сказал клиент → показать функцию → объяснить человеческим языком, что изменится → назвать выгоду → спросить реакцию.</div></div></div></details>
+  </div>
+  <div class="transition"><h3>Переход к 06</h3><div>Клиент подтвердил, что решение закрывает его проблему, и смог назвать ценность для себя. После этого можно собирать ценность и обсуждать цену.</div></div>
+  <div class="mistakes"><h3>Ошибки</h3><ul><li>показывать всё подряд;</li><li>говорить только техническими терминами;</li><li>не проверять реакцию после блока;</li><li>показывать функцию, которая не связана с найденной болью.</li></ul></div>
+</div>
 
-      <div class="step">
-        <div class="step-title">П — проблема</div>
-        <p>Найти конкретную сложность, а не придумывать её за клиента.</p>
-        <div class="speech"><b>Примеры</b>«Что сейчас больше всего неудобно?» · «Где чаще всего возникают ошибки?» · «Бывает недостача?» · «Сложно контролировать сотрудников?» · «Бывает, что товар залеживается?»</div>
-      </div>
+<div class="panel" data-panel="price" id="sale">
+  <div class="stage-head"><div><h2>06. Ключевая ценность + цена</h2><p class="lead">Цена не должна появляться из воздуха. Сначала собираем результат, который клиент уже признал полезным.</p></div><span class="status">Ценность → цена → действие</span></div>
+  <div class="box good"><h3>Собери ценность одной фразой</h3><p>«Если собрать то, что мы обсудили: вы убираете ___, получаете ___ и сможете ___. Поэтому для вас решение имеет смысл?»</p></div>
+  <div class="grid2" style="margin-top:14px"><details class="card" open><summary>Как озвучить цену</summary><div class="card-body"><div class="row quote"><div class="label">Вариант</div><div class="text">«Тогда по вашему комплекту получается ___ тг. Можно рассмотреть оплату полностью или рассрочку. Как вам удобнее?»</div></div><div class="row"><div class="label">Важно</div><div class="text">Используем актуальный расчёт из действующего предложения, а не старую цифру из учебной карточки.</div></div></div></details><details class="card"><summary>Если нужно условие / срок</summary><div class="card-body"><div class="row"><div class="text">Сначала объясняем реальное условие предложения, затем сразу задаём следующий конкретный вопрос: способ оплаты, дата установки или оформление.</div></div></div></details></div>
+  <div class="transition"><h3>Переход к 07</h3><div>Цена названа, клиент понял комплект и условия → не возвращаемся в длинную презентацию. Дальше выясняем готовность и фиксируем действие.</div></div>
+</div>
 
-      <div class="step">
-        <div class="step-title">И — последствия</div>
-        <p>Понять, к чему эта проблема приводит в деньгах, времени, контроле или продажах.</p>
-        <div class="speech"><b>Примеры</b>«Если это будет повторяться, сколько времени/денег вы будете терять?» · «Как это влияет на продажи?» · «Сколько времени уходит на ручной контроль?»</div>
-      </div>
-
-      <div class="step">
-        <div class="step-title">Н — наведение</div>
-        <p>Перевести разговор от проблемы к желаемому результату.</p>
-        <div class="speech"><b>Примеры</b>«Если это убрать, что изменится в вашей работе?» · «Куда вы сможете направить освободившееся время?» · «Что для вас будет означать нормальный контроль этого процесса?»</div>
-      </div>
-
-      <div class="speech expect"><b>Что должно быть услышано от клиента</b>Конкретная проблема + её последствие + понимание, что клиенту нужен другой результат.</div>
-      <div class="speech"><b>Резюме менеджера</b>«Правильно понимаю: сейчас у вас [конкретная проблема], из-за этого [последствие], и для вас важно [желаемый результат]?»</div>
-      <div class="speech next"><b>Переходим в СПВ только когда</b>Клиент подтвердил резюме. Если боль не подтверждена — не начинаем презентацию.</div>
-      <div class="speech stop"><b>Не допускать</b>Не задавать 15 вопросов подряд ради самого СПИН. Не подсказывать клиенту «правильную» боль. Не переходить к функции после первого же ответа без понимания последствий.</div>
-    </div>
-  </section>
-
-  <section class="stage" id="s4">
-    <div class="stage-head">
-      <div class="stage-num">04 · ПРЕЗЕНТАЦИЯ</div>
-      <h2>Показываем не программу целиком, а решение конкретной боли</h2>
-      <p class="stage-sub">Связка должна быть прямой: услышали боль → выбрали соответствующий блок СПВ → показали функцию → объяснили изменение → показали выгоду → проверили реакцию.</p>
-    </div>
-    <div class="body">
-      <div class="flow">
-        <span>Подтверждённая боль</span><span>Свойство</span><span>Преимущество</span><span>Выгода</span><span>Ключевая ценность</span><span>Проверка реакции</span>
-      </div>
-
-      <div class="grid">
-        <div class="box"><h3>Если боль — остатки</h3><p>Показываем соответствующий функционал по остаткам, размерам/цветам или просмотру наличия. Не просто «у нас есть функция», а что клиент сможет контролировать.</p></div>
-        <div class="box"><h3>Если боль — сотрудники</h3><p>Показываем продажи сотрудников, расчёт зарплаты/мотивации и связь с контролем результата.</p></div>
-        <div class="box"><h3>Если боль — клиенты</h3><p>Показываем клиентскую базу и инструменты лояльности как решение задачи повторных продаж и удержания.</p></div>
-        <div class="box"><h3>Если боль — удалённый контроль</h3><p>Показываем нужный способ просмотра данных и связываем его с экономией времени собственника.</p></div>
-      </div>
-
-      <div class="speech">
-        <b>Как говорить</b>
-        «Вы сказали, что у вас сейчас проблема с [боль]. Покажу именно этот момент. Здесь [свойство]. Для вас это значит [преимущество]. В итоге вы получаете [конкретная выгода]».
-      </div>
-      <div class="speech">
-        <b>Проверка после показа</b>
-        «Как вам это?» · «Это решает ту проблему, о которой вы говорили?» · «Насколько для вас это полезно?»
-      </div>
-      <div class="speech expect"><b>Что фиксируем</b>Какие функции клиенту реально понравились и какая выгода для него важнее всего.</div>
-      <div class="speech stop"><b>Ошибка</b>Не показывать всё подряд. Не перечислять функции без связи с болью. Не использовать сложные литературные формулировки — менеджер должен говорить так, как реально говорит с предпринимателем.</div>
-      <div class="speech next"><b>Переходим дальше, когда</b>Основная подтверждённая боль закрыта, клиент видит ценность решения и дал нормальную реакцию на показ.</div>
-    </div>
-  </section>
-
-  <section class="stage" id="s5">
-    <div class="stage-head">
-      <div class="stage-num">05 · ЦЕНА И ПРОДАЖА</div>
-      <h2>Цена появляется после ценности, а не вместо неё</h2>
-      <p class="stage-sub">Перед ценой менеджер коротко собирает результат, который уже подтвердил клиент.</p>
-    </div>
-    <div class="body">
-      <div class="speech">
-        <b>Предзакрытие</b>
-        «Итак, [имя], я показал вам основные моменты. Как вам?»<br>
-        «На сколько по 10-балльной шкале вам зашло то, что я показал?»<br>
-        Если не 10: «Чего не хватило, чтобы поставить твёрдую 10?»
-      </div>
-
-      <div class="speech">
-        <b>Ключевая ценность</b>
-        «Получается, для вас главное — [подтверждённая выгода]. Плюс мы решаем [вторая боль], и за счёт этого вы получаете [результат].»
-      </div>
-
-      <div class="price">
-        <div class="box"><strong>387 000 ₸</strong>программа + полный комплект оборудования</div>
-        <div class="box"><strong>234 300 ₸</strong>программа + комплект без моноблока</div>
-        <div class="box"><strong>140 000 ₸</strong>программа с установкой и обучением</div>
-      </div>
-      <p class="footer-note">Цены выше взяты из исходного материала встречи. Перед использованием менеджер должен сверять актуальный прайс.</p>
-
-      <div class="speech">
-        <b>Продающий вопрос</b>
-        «Вам удобнее наличными или в рассрочку?» · «На когда можем поставить установку?» · «Оформляемся?»
-      </div>
-      <div class="speech expect"><b>Что ожидаем</b>Либо согласие/готовность к оформлению, либо конкретное сомнение, которое нужно разобрать.</div>
-      <div class="speech next"><b>Переходим в возражение, когда</b>Клиент не идёт дальше из-за конкретного сомнения: цена, условия, программа, сравнение, время, необходимость подумать и т.п.</div>
-    </div>
-  </section>
-
-  <section class="stage" id="s6">
-    <div class="stage-head">
-      <div class="stage-num">06 · ВОЗРАЖЕНИЕ</div>
-      <h2>Не спорим — сначала понимаем, что именно мешает купить</h2>
-      <p class="stage-sub">Возражения — отдельный модуль. На встрече менеджер не уходит в случайную реплику: сначала определяет реальную причину, затем открывает соответствующую карточку возражения.</p>
-    </div>
-    <div class="body">
-      <div class="step">
-        <div class="step-title">1. Уточнить</div>
-        <div class="speech">«Правильно понимаю, вас сейчас останавливает именно [причина]?»</div>
-      </div>
-      <div class="step">
-        <div class="step-title">2. Выбрать карточку</div>
-        <p>Открываем именно то возражение, которое совпадает с причиной клиента. Не читаем все возражения подряд.</p>
-      </div>
-      <div class="step">
-        <div class="step-title">3. Отработать</div>
-        <p>Коротко отвечаем, возвращаемся к фактам и к той ценности, которую клиент уже подтвердил.</p>
-      </div>
-      <div class="step">
-        <div class="step-title">4. Проверить</div>
-        <div class="speech">«Если этот момент решаем, остались ещё вопросы?»</div>
-      </div>
-      <div class="speech stop"><b>Не допускать</b>Не спорить с клиентом. Не обесценивать его текущую программу. Не выдавать длинную заученную речь, если клиент задал один конкретный вопрос. Не переходить к новой скидке, пока не понятно настоящее возражение.</div>
-      <div class="speech next"><b>Переходим к закрытию, когда</b>Возражение действительно снято и клиент снова готов обсуждать оформление.</div>
-    </div>
-  </section>
-
-  <section class="stage" id="s7">
-    <div class="stage-head">
-      <div class="stage-num">07 · ЗАКРЫТИЕ</div>
-      <h2>Закрытие = конкретная договорённость</h2>
-      <p class="stage-sub">Не заканчиваем встречу фразой «ну тогда подумайте». Следующий шаг должен быть конкретным.</p>
-    </div>
-    <div class="body">
-      <div class="grid">
-        <div class="box">
-          <h3>Сигналы готовности</h3>
-          <ul>
-            <li>клиент задаёт конкретные вопросы об условиях;</li>
-            <li>просит повторно показать продукт;</li>
-            <li>подключает человека, который влияет на решение;</li>
-            <li>обсуждает скидку или способ оплаты;</li>
-            <li>говорит, что предложение подходит.</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Как закрывать</h3>
-          <div class="speech">«Если вопросов больше нет, давайте оформим».<br>«Как удобнее оплатить?»<br>«На когда ставим установку?»</div>
-        </div>
-      </div>
-
-      <details>
-        <summary>Техника «три да» — из исходного материала</summary>
-        <div class="detail">
-          <div class="speech">«В целом предложение для вас интересное?»</div>
-          <div class="speech">«Вы могли бы воспользоваться этим решением?»</div>
-          <div class="speech">«По стоимости вас всё устраивает?»</div>
-          <div class="speech expect">После подтверждения: «Отлично, тогда оформляем документы».</div>
-        </div>
-      </details>
-
-      <details>
-        <summary>Выбор без выбора — из исходного материала</summary>
-        <div class="detail">
-          <div class="speech">«Вас устроит установка в понедельник после обеда или утром?»</div>
-          <div class="speech">«Будете оплачивать наличными или Kaspi?»</div>
-        </div>
-      </details>
-
-      <details>
-        <summary>Суммирующее завершение — из исходного материала</summary>
-        <div class="detail">
-          <div class="speech">«Мы говорили о [первое преимущество]. Вы отметили, что это даёт [второй результат]. Ещё для вас важно [третья ценность]. Давайте оформим?»</div>
-        </div>
-      </details>
-
-      <div class="grid" style="margin-top:12px">
-        <div class="box"><h3>Что фиксируем</h3><p>Договор, способ оплаты, дату установки, необходимые данные, кто участвует в дальнейшем решении.</p></div>
-        <div class="box"><h3>После сделки</h3><p>По исходному материалу: внести данные клиента в AmoCRM, заполнить отчётность и организовать дальнейшее сопровождение.</p></div>
-      </div>
-
-      <div class="speech next"><b>Финальный результат встречи</b>Есть либо оформленная сделка, либо конкретный следующий шаг с датой, ответственным и понятным условием перехода.</div>
-    </div>
-  </section>
-
-  <section class="stage">
-    <div class="stage-head">
-      <div class="stage-num">КОНТРОЛЬ МЕНЕДЖЕРА</div>
-      <h2>Перед переходом на следующий этап задай себе один вопрос</h2>
-    </div>
-    <div class="body">
-      <div class="flow">
-        <span>Я понял ситуацию?</span>
-        <span>Клиент назвал проблему?</span>
-        <span>Я понял последствия?</span>
-        <span>Клиент подтвердил боль?</span>
-        <span>Я показал именно это?</span>
-        <span>Клиент увидел ценность?</span>
-        <span>Я понял причину сомнения?</span>
-        <span>Следующий шаг конкретный?</span>
-      </div>
-      <div class="rule">Если на предыдущий вопрос нет ответа — не перескакиваем дальше. Возвращаемся на один шаг назад и закрываем пробел.</div>
-    </div>
-  </section>
+<div class="panel" data-panel="close">
+  <div class="stage-head"><div><h2>07. Закрытие и следующий шаг</h2><p class="lead">Закрытие — это не давление. Это фиксация решения, которое клиент уже обсудил.</p></div><span class="status">Зафиксировать действие</span></div>
+  <div class="grid2">
+    <details class="card" open><summary>Какие сигналы готовности ждать</summary><div class="card-body"><ul><li>клиент задаёт конкретные вопросы по покупке;</li><li>просит ещё раз показать важную функцию;</li><li>обсуждает условия и цену;</li><li>подключает партнёра/ЛПР;</li><li>говорит «в целом подходит», «мне нравится», «то, что нужно».</li></ul></div></details>
+    <details class="card"><summary>Какой вопрос задать</summary><div class="card-body"><div class="examples"><div class="example"><b>Оплата</b>«Как вам удобнее — полностью или в рассрочку?»</div><div class="example"><b>Дата</b>«На когда можем поставить установку?»</div><div class="example"><b>Оформление</b>«Оформляемся?»</div><div class="example"><b>Фиксация</b>«Тогда давайте зафиксируем: сегодня ___, установка ___».</div></div></div></details>
+  </div>
+  <div class="box warn" style="margin-top:14px"><h3>Если клиент не готов</h3><p>Не придумываем новое давление. Выясняем, чего не хватает: информации, согласования с партнёром, бюджета или времени. Если это возражение — переходим в отдельный модуль <a href="objections.html">«Возражения»</a>, а затем возвращаемся сюда к конкретному следующему шагу.</p></div>
+  <div class="transition"><h3>Встреча считается завершённой, когда</h3><div>Есть зафиксированный результат: оплата/предоплата, дата установки, договорённость о согласовании с ЛПР или конкретная дата следующего контакта. «Подумаем когда-нибудь» без даты — это не следующий шаг.</div></div>
+  <div class="mistakes"><h3>Ошибки</h3><ul><li>после «мне подходит» снова читать презентацию;</li><li>бояться задать закрывающий вопрос;</li><li>оставлять встречу без даты и действия;</li><li>смешивать отработку возражений с основной структурой встречи.</li></ul></div>
+</div>
+</section>
+</div>
+<div class="footer">OPONAY · Встреча · логика: подготовка → контакт → СПИН → подтверждение боли → СПВ → ценность → цена → следующий шаг.</div>
 </main>
+<script>
+const btns=[...document.querySelectorAll('.stage-btn')], panels=[...document.querySelectorAll('.panel')];
+btns.forEach(btn=>btn.addEventListener('click',()=>{btns.forEach(x=>x.classList.remove('active'));btn.classList.add('active');panels.forEach(p=>p.classList.toggle('active',p.dataset.panel===btn.dataset.stage));window.scrollTo({top:0,behavior:'smooth'})}));
+const checks=[...document.querySelectorAll('.check input')], count=document.getElementById('check-count'), bar=document.getElementById('check-bar');
+function update(){const n=checks.filter(x=>x.checked).length;count.textContent=`${n} / ${checks.length}`;bar.style.width=(n/checks.length*100)+'%'}checks.forEach(x=>x.addEventListener('change',update));update();
+</script>
 </body>
 </html>
