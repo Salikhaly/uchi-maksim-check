@@ -1,46 +1,380 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPONAY — Встреча</title><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#F5F7FA;color:#1c201e}header{position:sticky;top:0;z-index:10;background:#1A1A1A;color:#fff;display:flex;align-items:center;padding:12px 20px;gap:20px}header b{font-size:18px}nav{margin-left:auto;display:flex;gap:6px;overflow:auto;white-space:nowrap}nav a{color:#E5EAF1;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:12px;font-weight:700}nav a:hover{background:#fff;color:#1A1A1A}main{max-width:1180px;margin:auto;padding:34px 22px 70px}h1{font-size:42px;margin:0 0 8px}.lead{font-size:17px;color:#5A6472;line-height:1.6;max-width:920px}.timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin:28px 0}.t{padding:15px 10px;border-top:3px solid #1F3A6E;background:#fff;border-right:1px solid #E5EAF1;font-size:13px;font-weight:800}.t:last-child{border-right:0}.section{margin-top:16px;background:#fff;border:1px solid #E5EAF1;border-radius:16px;padding:20px}.section h2{margin:0 0 10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.item{border:1px solid #E5EAF1;border-radius:12px;padding:14px;background:#FFFFFF}.item h3{margin:0 0 6px;font-size:15px}.item p{margin:0;color:#5A6472;line-height:1.5}.question{margin-top:8px;padding:10px 12px;background:#EEF3FA;border-left:3px solid #1F3A6E;border-radius:8px;line-height:1.5}.spv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.spv div{padding:12px;border:1px solid #E5EAF1;border-radius:10px;background:#FFFFFF}.spv b{display:block;color:#1F3A6E;margin-bottom:5px}.link{display:inline-block;margin-top:14px;background:#1F3A6E;color:#fff;text-decoration:none;padding:11px 14px;border-radius:9px;font-weight:800}@media(max-width:900px){header{flex-wrap:wrap;padding:10px 12px}nav{width:100%;margin-left:0}main{padding:25px 14px}.timeline{grid-template-columns:1fr}.t{border-right:0;border-bottom:1px solid #E5EAF1}.grid,.spv{grid-template-columns:1fr}h1{font-size:32px}}</style><style id="excel-integration">.academy-excel{margin:48px 0;padding:28px;background:#F5F7FA;border:1px solid #E5EAF1;border-radius:18px}.academy-excel-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.academy-excel-kicker{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#2E5AAC;font-weight:800}.academy-excel h2{margin:6px 0;font-size:30px;line-height:1.15;color:#1F3A6E}.academy-excel p{margin:0;color:#5A6472}.academy-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.academy-accordion{background:#fff;border:1px solid #E5EAF1;border-radius:12px;overflow:hidden}.academy-accordion summary{cursor:pointer;list-style:none;padding:15px 17px;font-weight:700;color:#1A1A1A}.academy-accordion summary::-webkit-details-marker{display:none}.academy-accordion summary:after{content:'+';float:right;color:#2E5AAC;font-size:20px}.academy-accordion[open] summary:after{content:'−'}.academy-detail{padding:0 17px 17px;border-top:1px solid #E5EAF1}.academy-source-row{padding-top:12px}.academy-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#5A6472;font-weight:800;margin-bottom:4px}.academy-source-row div:last-child{font-size:14px;line-height:1.55;color:#1A1A1A}.academy-pill{display:inline-block;padding:5px 9px;border-radius:999px;background:#EAF0F9;color:#1F3A6E;font-size:11px;font-weight:800;margin-right:6px;margin-bottom:6px}@media(max-width:760px){.academy-source-grid{grid-template-columns:1fr}.academy-excel{padding:20px;margin:32px 0}.academy-excel h2{font-size:25px}.academy-excel-head{display:block}} </style><style id="oponay-blue-system">:root{--primary:#1F3A6E!important;--dark:#152A52!important;--accent:#2E5AAC!important;--background:#FFFFFF!important;--light:#F5F7FA!important;--text-primary:#1A1A1A!important;--text-secondary:#5A6472!important;--line:#E5EAF1!important;--shadow:0 4px 20px rgba(31,58,110,.08)!important}body{background:var(--background)!important;color:var(--text-primary)!important}header{background:#fff!important;color:var(--text-primary)!important;border-color:var(--line)!important;box-shadow:0 2px 14px rgba(31,58,110,.05)}nav a,.nav a{color:var(--text-secondary)!important}nav a:hover,.nav a:hover,nav a.active,.nav a.active{background:#EEF3FA!important;color:var(--primary)!important}.hero,.panel,.card,.lesson,.block,.box,section,details{border-color:var(--line)!important;box-shadow:var(--shadow)}h1,h2,h3,.logo{color:var(--primary)!important}p,li,small,.muted{color:var(--text-secondary)}button,.btn,.primary{border-radius:10px!important}.primary,button.primary{background:var(--primary)!important;color:#fff!important}.secondary{background:#fff!important;color:var(--primary)!important;border:2px solid var(--primary)!important}input,textarea,select{background:#F5F7FA!important;border-color:var(--line)!important;color:var(--text-primary)!important;border-radius:10px!important}details{background:#fff!important}summary{color:var(--text-primary)!important}.accent,.kicker,.eyebrow{color:var(--accent)!important}.section.light,section{background:#F5F7FA}.pill,.tag{background:#EEF3FA!important;color:var(--primary)!important}@media(max-width:700px){body{overflow-x:hidden}main{max-width:100%!important}.grid,.cards,.feature-grid{grid-template-columns:1fr!important}.nav,nav{overflow-x:auto;-webkit-overflow-scrolling:touch}.nav a,nav a{white-space:nowrap}.hero{padding:22px!important}h1{font-size:clamp(34px,9vw,48px)!important}h2{font-size:clamp(26px,7vw,36px)!important}}</style><style id="excel-deep-style">.excel-deep{margin:18px 0;background:#F5F7FA;border:1px solid #E5EAF1;border-radius:18px;padding:26px}.excel-deep h2{margin:5px 0 8px;color:#1F3A6E}.excel-deep>p{margin:0 0 20px;color:#5A6472}.excel-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.excel-grid details{background:#fff;border:1px solid #E5EAF1;border-radius:12px;overflow:hidden}.excel-grid summary{padding:14px 16px;font-weight:800;color:#1A1A1A;cursor:pointer}.excel-body{border-top:1px solid #E5EAF1;padding:4px 16px 15px}.excel-field{padding-top:11px}.excel-field small{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:9px;font-weight:800;color:#5A6472;margin-bottom:3px}.excel-field div{font-size:13px;line-height:1.55;color:#1A1A1A}@media(max-width:760px){.excel-deep{padding:18px}.excel-grid{grid-template-columns:1fr}}</style><link rel="stylesheet" href="p0-ui.css"><link rel="stylesheet" href="p1-ui.css"><link rel="stylesheet" href="oponay-qa.css"></head><body><header><b>🤝 Встреча</b><nav><a href="index.html">Главная</a><a href="call.html">Холодный звонок</a><a href="spin.html">СПИН</a><a href="spv-source.html">СПВ</a></nav></header><main><div id="p0-app" data-p0-page="meeting"></div><h1>Встреча — полный рабочий маршрут</h1><p class="lead">Здесь собрана логика встречи из исходного материала: подготовка → приветствие → ТМР → план → диагностика по СПИН → подтверждение боли → презентация через СПВ → ключевая ценность → цена → закрытие → оформление → сопровождение.</p><div class="timeline"><div class="t">01<br>Подготовка</div><div class="t">02<br>Приветствие</div><div class="t">03<br>План</div><div class="t">04<br>СПИН</div><div class="t">05<br>СПВ</div><div class="t">06<br>Цена</div><div class="t">07<br>Закрытие</div></div><section class="section"><h2>01. Подготовка</h2><div class="grid"><div class="item"><h3>Документы</h3><p>Договор, чеклист, листовки.</p></div><div class="item"><h3>Проверить перед выездом</h3><p>Заряжен ли ноутбук. Запускается ли программа. Добавлены ли товары под этого клиента в базу.</p></div><div class="item"><h3>Знать конкурентов клиента</h3><p>Для торговли: Umag, Paloma365, Adishop, Torgosoft. Для общепита: iiko, r-keeper, Paloma365.</p></div><div class="item"><h3>Просчитать комплект</h3><p>С моноблоком и без — прикинуть примерную стоимость пакета заранее.</p></div></div></section><section class="section"><h2>02. Приветствие + ТМР</h2><div class="grid"><div class="item"><h3>Знакомство</h3><p>«Добрый день, (имя)! Я ____ из OPONAY. Мы созванивались по автоматизации, договорились на 14:00».</p></div><div class="item"><h3>Small talk</h3><p>Примеры из исходника: про пробки, погоду, большой выбор товаров, расположение магазина.</p></div></div><div class="question"><b>Озвучить план:</b> «Чтобы провести презентацию по делу, сначала задам пару вопросов. Потом покажу программу. И поговорим о сотрудничестве».</div></section><section class="section"><h2>03. Диагностика — ведём по СПИН</h2><div class="grid"><div class="item"><h3>Ситуация</h3><p>Как сейчас ведёте учёт? Какой программой пользуетесь? Как проходит приёмка? Сколько точек и сотрудников? Как ведёте базу клиентов? Как считаете оборот и прибыль?</p></div><div class="item"><h3>Проблема</h3><p>Что не устраивает? Какие проблемы хотите решить? Как часто бывает недостача? Бывает нехватка денег на закуп? Как распродаёте залежавшийся товар?</p></div><div class="item"><h3>Извлечение</h3><p>Если недостачи будут в том же объёме — сколько потеряете за год? Если каждый день теряете клиента — как это бьёт по прибыли? Если вы 24/7 заняты контролем — как быстро выгорите?</p></div><div class="item"><h3>Наведение</h3><p>На что потратите освободившееся время? Если продавец сразу видит наличие — насколько вырастут продажи? Когда проблемы решатся — какие шаги сделаете для роста?</p></div></div><div class="question"><b>Резюме:</b> «Правильно понимаю — сейчас у вас сложности с (перечислить то, что назвал клиент)?»</div></section><section class="section"><h2>04. Презентация — только под найденную боль</h2><p class="lead">Не читаем весь список функций. Сначала возвращаемся к проблеме клиента, затем показываем конкретную функцию и проводим её через СПВ.</p><div class="spv"><div><b>Свойство</b>Что именно умеет программа.</div><div><b>Преимущество</b>Что меняется в работе клиента.</div><div><b>выгода</b>Что получает бизнес в деньгах, времени, контроле или продажах.</div></div><div class="grid" style="margin-top:10px"><div class="item"><h3>Если проблема с остатками</h3><p>Размерная сетка → точнее понимаете остатки по размерам/цветам → меньше зависшего товара.</p></div><div class="item"><h3>Если проблема с контролем</h3><p>Удалённый доступ → смотрите продажи/остатки/отчёты с телефона → меньше поездок и больше контроля.</p></div><div class="item"><h3>Если проблема с сотрудниками</h3><p>Продажи по продавцам + зарплата/мотивация → видите результат → проще управлять эффективностью.</p></div><div class="item"><h3>Если проблема с клиентами</h3><p>База + лояльность → история покупок и бонусы → больше повторных продаж.</p></div></div><a class="link" href="spv-source.html">Открыть весь исходный СПВ с примерами →</a></section><section class="section"><h2>05. Ключевая ценность</h2><div class="question">Собираем несколько найденных выгод в один результат: меньше потерь + больше контроля + экономия времени + возможность роста. Только после того, как клиент подтвердил ценность, переходим к цене.</div></section><section class="section"><h2>06. Цена и «Сэндвич»</h2><div class="grid"><div class="item"><h3>Ключевая ценность</h3><p>Перед ценой ещё раз коротко фиксируем, что именно клиент получит.</p></div><div class="item"><h3>Цена</h3><p>Используем актуальный тариф/комплект из исходного материала и считаем под конкретный бизнес.</p></div><div class="item"><h3>Дедлайн / условие</h3><p>В исходнике: рассрочка, приоритет установки, скидка на оборудование, дополнительные обучения или подарок в зависимости от предложения.</p></div><div class="item"><h3>Закрывающий вопрос</h3><p>«Удобнее наличными или в рассрочку?» · «На когда ставим установку?» · «Оформляемся?»</p></div></div></section><section class="section"><h2>07. Завершение и сопровождение</h2><div class="grid"><div class="item"><h3>Сигналы готовности</h3><p>Клиент уточняет детали, просит показать продукт, подключает ЛПР, торгуется о скидке или говорит, что предложение подходит.</p></div><div class="item"><h3>Оформление</h3><p>Подписать договор, обговорить дату установки, взять данные для регистрации.</p></div><div class="item"><h3>Отчётность</h3><p>Заполнить данные клиента в AmoCRM, отчёт в Google Docs и в группу в конце дня.</p></div><div class="item"><h3>Постпродажное сопровождение</h3><p>Связь через неделю, 2 месяца, 6 месяцев и через год — продажа тарифа на год.</p></div></div></section><section class="academy-excel"><div class="academy-excel-head"><div><div class="academy-excel-kicker">Из материалов Excel</div><h2>Подготовка ко встрече</h2><p>Чеклист из Excel: документы, оборудование, программа, категории и товары клиента, расчёт стоимости и вопросы.</p></div><span class="academy-pill">9 материалов</span></div><div class="academy-source-grid"><details class="academy-accordion"><summary>1. ДОКУМЕНТЫ:</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>1. ДОКУМЕНТЫ:</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Договор</div></div></div></details><details class="academy-accordion"><summary>Чеклист</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Чеклист</div></div></div></details><details class="academy-accordion"><summary>Листовки</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Листовки</div></div></div></details><details class="academy-accordion"><summary>2. ПРОВЕРИТЬ:</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>2. ПРОВЕРИТЬ:</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Заряжен ли ноут</div></div></div></details><details class="academy-accordion"><summary>Программу на запуск</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Программу на запуск</div></div></div></details><details class="academy-accordion"><summary>Добавить товары под клиента</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Добавить товары под клиента</div></div></div></details><details class="academy-accordion"><summary>3. ПРОСМОТРЕТЬ КОНКУРЕТОВ</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>3. ПРОСМОТРЕТЬ КОНКУРЕТОВ</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Для торговли: umag, paloma365, adishop,  торгосфт и тд</div></div></div></details><details class="academy-accordion"><summary>Для общепита: iiko, r-keeper, paloma365,</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Для общепита: iiko, r-keeper, paloma365,</div></div></div></details><details class="academy-accordion"><summary>4. ПРОСЧИТАТЬ ГОТОВЫЙ КОМПЛЕКТ</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>4. ПРОСЧИТАТЬ ГОТОВЫЙ КОМПЛЕКТ</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>С моноблоком и без</div></div></div></details></div></section><section class="academy-excel"><div class="academy-excel-head"><div><div class="academy-excel-kicker">Из материалов Excel</div><h2>Приветствие и ТМР</h2><p>Готовые формулировки знакомства и small talk.</p></div><span class="academy-pill">8 материалов</span></div><div class="academy-source-grid"><details class="academy-accordion"><summary>1. ЗНАКОМСТВО</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>1. ЗНАКОМСТВО</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Добрый день, (имя клиента)! Меня зовут ____, компания OPONAY. Мы с вами созванивались по поводу автоматизации. Договорились о встрече в 14:00</div></div></div></details><details class="academy-accordion"><summary>2. ТМР (Small talk)</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>2. ТМР (Small talk)</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Так долго ехала к вам, ужасные пробки</div></div></div></details><details class="academy-accordion"><summary>Сегодня прекрасная погода, наконец потеплело. Любите такую?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Сегодня прекрасная погода, наконец потеплело. Любите такую?</div></div></div></details><details class="academy-accordion"><summary>У вас такой большой ассортимент/выбор товаров</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>У вас такой большой ассортимент/выбор товаров</div></div></div></details><details class="academy-accordion"><summary>У вашего магазина отличное месторасположение!</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>У вашего магазина отличное месторасположение!</div></div></div></details><details class="academy-accordion"><summary>3. Озвучить план встречи</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>3. Озвучить план встречи</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Чтобы качественно показать вам программу, я сейчас задам вам пару вопросов</div></div></div></details><details class="academy-accordion"><summary>Потом покажу программу и разберём то, что вам нужно</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Потом покажу программу и разберём то, что вам нужно</div></div></div></details><details class="academy-accordion"><summary>А потом вы у меня купите)/поговорим о сотрудничестве/отвечу на оставшиеся вопросы</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>А потом вы у меня купите)/поговорим о сотрудничестве/отвечу на оставшиеся вопросы</div></div></div></details></div></section><section class="academy-excel"><div class="academy-excel-head"><div><div class="academy-excel-kicker">Из материалов Excel</div><h2>Презентация</h2><p>Готовые формулировки презентации компании и программы.</p></div><span class="academy-pill">12 материалов</span></div><div class="academy-source-grid"><details class="academy-accordion"><summary>1. О компании</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>1. О компании</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Наша компания называется OPONAY, мы местная казахстнская IT компания, которая на рынке автоматизации более 3 лет. Мы знаем и решаем реальные проблемы проблемы собственника, и рекомендуем только полезные решения<br>Мы работаем на совесть на всех этапах</div></div></div></details><details class="academy-accordion"><summary>2. Презентация программы</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>2. Презентация программы</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>1) Удобная размерная сетка помогает собственнику магазина более точно определить, какие размеры одежды наиболее востребованы у покупателей. Это позволяет снизить риск накопления залежавшихся товаров и сосредоточиться на наиболее популярных размерах и соответсвенно увеличить прибыль</div></div></div></details><details class="academy-accordion"><summary>2) Возможность мотивации и просчета заработной платы позволит вам эффективно управлять и мотивировать персонал, повышать эффективность и результативность, управлять затратами, прив</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>2) Возможность мотивации и просчета заработной платы позволит вам эффективно управлять и мотивировать персонал, повышать эффективность и результативность, управлять затратами, привлекать и удерживать сотрудников</div></div></div></details><details class="academy-accordion"><summary>3) Благодаря возможности просмотра остатков с кассовой зоны, сотрудники магазина могут оперативно информировать покупателей о наличии товара и предоставить точную и актуальную инфо</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>3) Благодаря возможности просмотра остатков с кассовой зоны, сотрудники магазина могут оперативно информировать покупателей о наличии товара и предоставить точную и актуальную информацию о размерах, цветах и других характеристиках товара. Это способствует лучшему обслуживанию клиентов, помогает удовлетворить их потребности и повысить уровень удовлетворенности.</div></div></div></details><details class="academy-accordion"><summary>4) Вместо того, чтобы изменять цены на каждый товар отдельно, возможность делать наценку и уценку на группу товаров позволяет сэкономить время и усилия при внесении изменений цен. </summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>4) Вместо того, чтобы изменять цены на каждый товар отдельно, возможность делать наценку и уценку на группу товаров позволяет сэкономить время и усилия при внесении изменений цен.  Это особенно полезно в случае акций, распродаж , когда требуется обновить цены на большое количество товаров.</div></div></div></details><details class="academy-accordion"><summary>3. Предзакрытие</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>3. Предзакрытие</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Итак, имя клиента, в общем-то я все вам рассказал, что хотел, вам как?</div></div></div></details><details class="academy-accordion"><summary>На сколько по 10-балльной шкале вам зашло то, что я вам только что показал?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>На сколько по 10-балльной шкале вам зашло то, что я вам только что показал?</div></div></div></details><details class="academy-accordion"><summary>Правильно ли я понимаю, что вам нравится наше предложение и вы готовы с нами сотрудничать, осталось только договориться о стоимости?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Правильно ли я понимаю, что вам нравится наше предложение и вы готовы с нами сотрудничать, осталось только договориться о стоимости?</div></div></div></details><details class="academy-accordion"><summary>Какие ваши впечатления? Поделитесь!</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Какие ваши впечатления? Поделитесь!</div></div></div></details><details class="academy-accordion"><summary>Я вижу, что не 10-ка. Скажите, а чего не хватило, какой информации или примеров, чтобы поставить твердую 10?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Я вижу, что не 10-ка. Скажите, а чего не хватило, какой информации или примеров, чтобы поставить твердую 10?</div></div></div></details><details class="academy-accordion"><summary>4. Чеклист</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 1</div><div>4. Чеклист</div></div><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Что особенно понравилось? А чего не хватило?</div></div></div></details><details class="academy-accordion"><summary>Расчет стоимости при клиенте по чеклисту</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Материал 2</div><div>Расчет стоимости при клиенте по чеклисту</div></div></div></details></div></section><section class="academy-excel"><div class="academy-excel-head"><div><div class="academy-excel-kicker">Из материалов Excel</div><h2>Продажа и закрытие</h2><p>Материалы Excel по сендвичу, цене и переходу к закрытию.</p></div><span class="academy-pill">30 материалов</span></div><div class="academy-source-grid"><details class="academy-accordion"><summary>1. Ключевая ценность через СПВ</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>1. Ключевая ценность через СПВ</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>1. С помощью нашей программы вы будете продавать/проводить все продажи через кассовую зону, исключаться ошибки и тем самым вы не будете терять деньги/записи</div></div></div></details><details class="academy-accordion"><summary>2.В нашей проге вы сможете видеть оборот и прибыль вашего магазина, что позволит вам понимать можете ли вы сейчас масштабироваться и как развиваться дальше</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>2.В нашей проге вы сможете видеть оборот и прибыль вашего магазина, что позволит вам понимать можете ли вы сейчас масштабироваться и как развиваться дальше</div></div></div></details><details class="academy-accordion"><summary>3. Только в нашей проге можно посмотреть остатки из кассовой зоны/моб версия, что исключает трату времени на поиск товара в ручную. А также можете увидеть в каком магазине есть это</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>3. Только в нашей проге можно посмотреть остатки из кассовой зоны/моб версия, что исключает трату времени на поиск товара в ручную. А также можете увидеть в каком магазине есть этот товар</div></div></div></details><details class="academy-accordion"><summary>2. Цена</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>2. Цена</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>стоимость программы и полного комплекта оборудования 387.000 тг</div></div></div></details><details class="academy-accordion"><summary>стоимость программы и комплекта оборудования без моноблока 234.300 тг</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>стоимость программы и комплекта оборудования без моноблока 234.300 тг</div></div></div></details><details class="academy-accordion"><summary>стоимость программы с установкой и обучением 140.000 тг</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>стоимость программы с установкой и обучением 140.000 тг</div></div></div></details><details class="academy-accordion"><summary>3. Дедлайн/лимит</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>3. Дедлайн/лимит</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>и все это вы сможете приобрести в рассрочку на 3/6/12 месяцев через Каспи/Жусан до конца недели/месяца</div></div></div></details><details class="academy-accordion"><summary>если вы сейчас  оставляйте предоплату, я смогу поставить вашу установку приоритетной</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>если вы сейчас  оставляйте предоплату, я смогу поставить вашу установку приоритетной</div></div></div></details><details class="academy-accordion"><summary>при оплате наличными, скидка на оборудование 5%</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>при оплате наличными, скидка на оборудование 5%</div></div></div></details><details class="academy-accordion"><summary>при покупке полного комплекта, сканер в подарок</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>при покупке полного комплекта, сканер в подарок</div></div></div></details><details class="academy-accordion"><summary>если оплачиваете сейчас, то вместо 2х стандратных обучения, поставим 3 очных обучения</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>если оплачиваете сейчас, то вместо 2х стандратных обучения, поставим 3 очных обучения</div></div></div></details><details class="academy-accordion"><summary>по прелоплате, смогу забронировать вам сканер</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>по прелоплате, смогу забронировать вам сканер</div></div></div></details><details class="academy-accordion"><summary>4. Продающий вопрос</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>4. Продающий вопрос</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>вам удобно наличными или рассрочку?</div></div></div></details><details class="academy-accordion"><summary>На когда можем поставить установку?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>На когда можем поставить установку?</div></div></div></details><details class="academy-accordion"><summary>Оформляемся?</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Оформляемся?</div></div></div></details><details class="academy-accordion"><summary>Допродажа</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>Допродажа</div></div></div></details><details class="academy-accordion"><summary>Up-sale</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>Up-sale</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>(поднятие суммы продажи) – это мотивация покупателя потратить больше денег.  Предлагаем оборудование классом выше, дороже (моноблок, сканер)</div></div></div></details><details class="academy-accordion"><summary>Cross-sale</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>Cross-sale</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>это также мотивация покупателя потратить больше денег, но уже через продажу товаров из других категорий. Продаем дополнительно камеры, антикражные ворота и тд</div></div></div></details><details class="academy-accordion"><summary>Завершение</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>Завершение</div></div></div></details><details class="academy-accordion"><summary>1. Распознание сигнала готовности</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>1. Распознание сигнала готовности</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Клиент задает множество вопросов, уточняет специфические детали, условия покупки, возможные проблем после приобретения продукта, повторяет и уточняет отдельные моменты.</div></div></div></details><details class="academy-accordion"><summary>Клиент высказывает конкретные требования, пожелания и условия.</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Клиент высказывает конкретные требования, пожелания и условия.</div></div></div></details><details class="academy-accordion"><summary>Клиент просит продемонстрировать  продукт еще раз либо испытать его самому.</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Клиент просит продемонстрировать  продукт еще раз либо испытать его самому.</div></div></div></details><details class="academy-accordion"><summary>Клиент привлекает к обсуждению покупки лиц, влияющих на решение о сделке.</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Клиент привлекает к обсуждению покупки лиц, влияющих на решение о сделке.</div></div></div></details><details class="academy-accordion"><summary>Клиент начинает торг о скидках.</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Клиент начинает торг о скидках.</div></div></div></details><details class="academy-accordion"><summary>Или просто говорит что-то вроде: «В целом неплохо», «Это мне нравится», «Пожалуй, то что надо», «Почему бы и нет»</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Или просто говорит что-то вроде: «В целом неплохо», «Это мне нравится», «Пожалуй, то что надо», «Почему бы и нет»</div></div></div></details><details class="academy-accordion"><summary>2. Техники завершения</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>2. Техники завершения</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Трехкратное &quot;ДА&quot;: — В целом предложение для вас интересное?<br>  — вы могли бы воспользоваться данным решением?<br>  — По стоимости вас все устраивает?<br>  — Отлично, если вам все подходит, тогда я оформляю (документы) сделку</div></div></div></details><details class="academy-accordion"><summary>Вопрос об оплате: — Если вопросов больше нет, тогда скажите пожалуйста ….и далее..
-  — Как вам удобнее будет произвести оплату?
-  — Пробуем оформлять рассрочку?
-  — Будьте добры Ва</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Вопрос об оплате: — Если вопросов больше нет, тогда скажите пожалуйста ….и далее..<br>  — Как вам удобнее будет произвести оплату?<br>  — Пробуем оформлять рассрочку?<br>  — Будьте добры ваши документы (реквизиты). Я оформлю счет для оплаты.</div></div></div></details><details class="academy-accordion"><summary>выбор без выбора: — вас устроит установка в понедельник после обеда или сразу с утра?
-  — вы будете оплачивать наличными или каспи ?
-  — И так, что вы решили? Возьмёте товар X или </summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>выбор без выбора: — вас устроит установка в понедельник после обеда или сразу с утра?<br>  — вы будете оплачивать наличными или каспи ?<br>  — И так, что вы решили? Возьмёте товар X или Y?</div></div></div></details><details class="academy-accordion"><summary>Суммирующее завершение: — Мы говорили о… (одно преимущество). вы увидите, что это дает (второе преимущество). вы так же отметили, что мы (третье преимущество). И нельзя забывать о </summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Суммирующее завершение: — Мы говорили о… (одно преимущество). вы увидите, что это дает (второе преимущество). вы так же отметили, что мы (третье преимущество). И нельзя забывать о том, что (четвертое преимущество). Оформляем?</div></div></div></details><details class="academy-accordion"><summary>3. Предоплата</summary><div class="academy-detail"><div class="academy-source-row"><div class="academy-label">Раздел</div><div>3. Предоплата</div></div><div class="academy-source-row"><div class="academy-label">Формулировка</div><div>Взять предоплату с клиента</div></div></div></details></div></section><!-- EXCEL_DEEP --><section class="excel-deep"><div class="kicker">Из рабочего Excel</div><h2>Чеклист полной встречи</h2><p>Полный чеклист из Excel: подготовка, приветствие, диагностика, презентация, продажа и завершение.</p><div class="excel-grid"><details><summary>Заранее просчитать примерную стоимость всего пакета для клиента</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Заранее просчитать примерную стоимость всего пакета для клиента</div></div></div></details><details><summary>2. Приветсвие</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Знакомство</div></div></div></details><details><summary>ТМР</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>ТМР</div></div></div></details><details><summary>Озвучить план встречи</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Озвучить план встречи</div></div></div></details><details><summary>Уточнение ЛПР</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Уточнение ЛПР</div></div></div></details><details><summary>3. выявление птребности</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Ситуационные вопросы</div></div></div></details><details><summary>Проблемные вопросы</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Проблемные вопросы</div></div></div></details><details><summary>Извлекающие вопросы</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Извлекающие вопросы</div></div></div></details><details><summary>Наводящие вопросы</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Наводящие вопросы</div></div></div></details><details><summary>Повторить ответы клиента убедиться в правильности инфо.</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Повторить ответы клиента убедиться в правильности инфо.</div></div></div></details><details><summary>4. Презентация</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Краткая информация о компании</div></div></div></details><details><summary>Презентация главных ценностей для клиента в проге</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Презентация главных ценностей для клиента в проге</div></div></div></details><details><summary>Предзакрытие</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Предзакрытие</div></div></div></details><details><summary>Расчёт стоимости при клиенте по чеклисту</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Расчёт стоимости при клиенте по чеклисту</div></div></div></details><details><summary>уточняюще вопросы\ответы на вопросы клиента</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>уточняюще вопросы\ответы на вопросы клиента</div></div></div></details><details><summary>5.Продажа</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>5.2 Сендвич</div></div><div class="excel-field"><small>Данные</small><div>Ключевая ценность через СПВ</div></div></div></details><details><summary>Цена</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Цена</div></div></div></details><details><summary>Дедлайн/лимит</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Дедлайн/лимит</div></div></div></details><details><summary>Сразу вопрос закрывающий</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Сразу вопрос закрывающий</div></div></div></details><details><summary>5.3 Работа с возражениями</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Отработка возражений, возникших во время встречи</div></div></div></details><details><summary>5.4 Допродажа</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Up-sale  (поднятие суммы продажи) – это мотивация покупателя потратить больше денег</div></div></div></details><details><summary>Cross-sale - это также мотивация покупателя потратить больше денег, но уже через продажу товаров из других категорий</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Cross-sale - это также мотивация покупателя потратить больше денег, но уже через продажу товаров из других категорий</div></div></div></details><details><summary>5.5  Завершение</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Распознавание сигнала готовности к покупке</div></div></div></details><details><summary>Применение подходящей техники заверешения</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Применение подходящей техники заверешения</div></div></div></details><details><summary>Предоплата</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Предоплата</div></div></div></details><details><summary>6. Оформление</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Подписать договор</div></div></div></details><details><summary>Обговорить дату установки</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Обговорить дату установки</div></div></div></details><details><summary>Взять данные для регистрации</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Взять данные для регистрации</div></div></div></details><details><summary>Взять данные для регистрации</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Взять данные для регистрации</div></div></div></details><details><summary>7. Отчетность</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Заполнить в AmoCRM все необходимые данные клиента</div></div></div></details><details><summary>Отчет в GOOGLE doсs</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Отчет в GOOGLE doсs</div></div></div></details><details><summary>Отчет в группу в конце дня</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Отчет в группу в конце дня</div></div></div></details><details><summary>8. ППС</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Связь с клиентом через неделю</div></div></div></details><details><summary>Связь с клиентом через 2 месяца</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Связь с клиентом через 2 месяца</div></div></div></details><details><summary>Связь с клиентом через 6 месяцев</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Связь с клиентом через 6 месяцев</div></div></div></details><details><summary>Связь с клиентом через год продажа тарифа на год</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Связь с клиентом через год продажа тарифа на год</div></div></div></details></div></section><section class="excel-deep"><div class="kicker">Из рабочего Excel</div><h2>Подготовка до выезда</h2><p>Что проверить и подготовить до встречи.</p><div class="excel-grid"><details><summary>1. ДОКУМЕНТЫ:</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Договор</div></div></div></details><details><summary>Чеклист</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Чеклист</div></div></div></details><details><summary>Листовки</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Листовки</div></div></div></details><details><summary>2. ПРОВЕРИТЬ:</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Заряжен ли ноут</div></div></div></details><details><summary>Программу на запуск</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Программу на запуск</div></div></div></details><details><summary>Добавить товары под клиента</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Добавить товары под клиента</div></div></div></details><details><summary>3. ПРОСМОТРЕТЬ КОНКУРЕТОВ</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Для торговли: umag, paloma365, adishop,  торгосфт и тд</div></div></div></details><details><summary>Для общепита: iiko, r-keeper, paloma365,</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Для общепита: iiko, r-keeper, paloma365,</div></div></div></details><details><summary>4. ПРОСЧИТАТЬ ГОТОВЫЙ КОМПЛЕКТ</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>С моноблоком и без</div></div></div></details></div></section><section class="excel-deep"><div class="kicker">Из рабочего Excel</div><h2>Приветствие и ТМР</h2><p>Готовые формулировки знакомства и small talk.</p><div class="excel-grid"><details><summary>1. ЗНАКОМСТВО</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Добрый день, (имя клиента)! Меня зовут ____, компания OPONAY. Мы с вами созванивались по поводу автоматизации. Договорились о встрече в 14:00</div></div></div></details><details><summary>2. ТМР (Small talk)</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Так долго ехала к вам, ужасные пробки</div></div></div></details><details><summary>Сегодня прекрасная погода, наконец потеплело. Любите такую?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Сегодня прекрасная погода, наконец потеплело. Любите такую?</div></div></div></details><details><summary>У вас такой большой ассортимент/выбор товаров</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>У вас такой большой ассортимент/выбор товаров</div></div></div></details><details><summary>У вашего магазина отличное месторасположение!</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>У вашего магазина отличное месторасположение!</div></div></div></details><details><summary>3. Озвучить план встречи</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Чтобы качественно показать вам программу, я сейчас задам вам пару вопросов</div></div></div></details><details><summary>Потом покажу программу и разберём то, что вам нужно</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Потом покажу программу и разберём то, что вам нужно</div></div></div></details><details><summary>А потом вы у меня купите)/поговорим о сотрудничестве/отвечу на оставшиеся вопросы</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>А потом вы у меня купите)/поговорим о сотрудничестве/отвечу на оставшиеся вопросы</div></div></div></details></div></section><section class="excel-deep"><div class="kicker">Из рабочего Excel</div><h2>Презентация</h2><p>Материалы презентации из Excel — показываем только под найденную боль.</p><div class="excel-grid"><details><summary>1. О компании</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Наша компания называется OPONAY, мы местная казахстнская IT компания, которая на рынке автоматизации более 3 лет. Мы знаем и решаем реальные проблемы проблемы собственника, и рекомендуем только полезные решения<br>Мы работаем на совесть на всех этапах</div></div></div></details><details><summary>2. Презентация программы</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>1) Удобная размерная сетка помогает собственнику магазина более точно определить, какие размеры одежды наиболее востребованы у покупателей. Это позволяет снизить риск накопления залежавшихся товаров и сосредоточиться на наиболее популярных размерах и соответсвенно увеличить прибыль</div></div></div></details><details><summary>2) Возможность мотивации и просчета заработной платы позволит вам эффективно управлять и мотивировать персонал, повышать эффективность и рез</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>2) Возможность мотивации и просчета заработной платы позволит вам эффективно управлять и мотивировать персонал, повышать эффективность и результативность, управлять затратами, привлекать и удерживать сотрудников</div></div></div></details><details><summary>3) Благодаря возможности просмотра остатков с кассовой зоны, сотрудники магазина могут оперативно информировать покупателей о наличии товара</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>3) Благодаря возможности просмотра остатков с кассовой зоны, сотрудники магазина могут оперативно информировать покупателей о наличии товара и предоставить точную и актуальную информацию о размерах, цветах и других характеристиках товара. Это способствует лучшему обслуживанию клиентов, помогает удовлетворить их потребности и повысить уровень удовлетворенности.</div></div></div></details><details><summary>4) Вместо того, чтобы изменять цены на каждый товар отдельно, возможность делать наценку и уценку на группу товаров позволяет сэкономить вре</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>4) Вместо того, чтобы изменять цены на каждый товар отдельно, возможность делать наценку и уценку на группу товаров позволяет сэкономить время и усилия при внесении изменений цен.  Это особенно полезно в случае акций, распродаж , когда требуется обновить цены на большое количество товаров.</div></div></div></details><details><summary>3. Предзакрытие</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Итак, имя клиента, в общем-то я все вам рассказал, что хотел, вам как?</div></div></div></details><details><summary>На сколько по 10-балльной шкале вам зашло то, что я вам только что показал?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>На сколько по 10-балльной шкале вам зашло то, что я вам только что показал?</div></div></div></details><details><summary>Правильно ли я понимаю, что вам нравится наше предложение и вы готовы с нами сотрудничать, осталось только договориться о стоимости?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Правильно ли я понимаю, что вам нравится наше предложение и вы готовы с нами сотрудничать, осталось только договориться о стоимости?</div></div></div></details><details><summary>Какие ваши впечатления? Поделитесь!</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Какие ваши впечатления? Поделитесь!</div></div></div></details><details><summary>Я вижу, что не 10-ка. Скажите, а чего не хватило, какой информации или примеров, чтобы поставить твердую 10?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Я вижу, что не 10-ка. Скажите, а чего не хватило, какой информации или примеров, чтобы поставить твердую 10?</div></div></div></details><details><summary>4. Чеклист</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Что особенно понравилось? А чего не хватило?</div></div></div></details><details><summary>Расчет стоимости при клиенте по чеклисту</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Расчет стоимости при клиенте по чеклисту</div></div></div></details></div></section><section class="excel-deep"><div class="kicker">Из рабочего Excel</div><h2>Продажа и закрытие</h2><p>Ключевая ценность, цена, закрытие и дальнейшие действия.</p><div class="excel-grid"><details><summary>1. Ключевая ценность через СПВ</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>1. С помощью нашей программы вы будете продавать/проводить все продажи через кассовую зону, исключаться ошибки и тем самым вы не будете терять деньги/записи</div></div></div></details><details><summary>2.В нашей проге вы сможете видеть оборот и прибыль вашего магазина, что позволит вам понимать можете ли вы сейчас масштабироваться и как раз</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>2.В нашей проге вы сможете видеть оборот и прибыль вашего магазина, что позволит вам понимать можете ли вы сейчас масштабироваться и как развиваться дальше</div></div></div></details><details><summary>3. Только в нашей проге можно посмотреть остатки из кассовой зоны/моб версия, что исключает трату времени на поиск товара в ручную. А также </summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>3. Только в нашей проге можно посмотреть остатки из кассовой зоны/моб версия, что исключает трату времени на поиск товара в ручную. А также можете увидеть в каком магазине есть этот товар</div></div></div></details><details><summary>2. Цена</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>стоимость программы и полного комплекта оборудования 387.000 тг</div></div></div></details><details><summary>стоимость программы и комплекта оборудования без моноблока 234.300 тг</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>стоимость программы и комплекта оборудования без моноблока 234.300 тг</div></div></div></details><details><summary>стоимость программы с установкой и обучением 140.000 тг</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>стоимость программы с установкой и обучением 140.000 тг</div></div></div></details><details><summary>3. Дедлайн/лимит</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>и все это вы сможете приобрести в рассрочку на 3/6/12 месяцев через Каспи/Жусан до конца недели/месяца</div></div></div></details><details><summary>если вы сейчас  оставляйте предоплату, я смогу поставить вашу установку приоритетной</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>если вы сейчас  оставляйте предоплату, я смогу поставить вашу установку приоритетной</div></div></div></details><details><summary>при оплате наличными, скидка на оборудование 5%</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>при оплате наличными, скидка на оборудование 5%</div></div></div></details><details><summary>при покупке полного комплекта, сканер в подарок</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>при покупке полного комплекта, сканер в подарок</div></div></div></details><details><summary>если оплачиваете сейчас, то вместо 2х стандратных обучения, поставим 3 очных обучения</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>если оплачиваете сейчас, то вместо 2х стандратных обучения, поставим 3 очных обучения</div></div></div></details><details><summary>по прелоплате, смогу забронировать вам сканер</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>по прелоплате, смогу забронировать вам сканер</div></div></div></details><details><summary>4. Продающий вопрос</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>вам удобно наличными или рассрочку?</div></div></div></details><details><summary>На когда можем поставить установку?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>На когда можем поставить установку?</div></div></div></details><details><summary>Оформляемся?</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Оформляемся?</div></div></div></details><details><summary>Допродажа</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Допродажа</div></div></div></details><details><summary>Up-sale</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>(поднятие суммы продажи) – это мотивация покупателя потратить больше денег.  Предлагаем оборудование классом выше, дороже (моноблок, сканер)</div></div></div></details><details><summary>Cross-sale</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>это также мотивация покупателя потратить больше денег, но уже через продажу товаров из других категорий. Продаем дополнительно камеры, антикражные ворота и тд</div></div></div></details><details><summary>Завершение</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Завершение</div></div></div></details><details><summary>1. Распознание сигнала готовности</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Клиент задает множество вопросов, уточняет специфические детали, условия покупки, возможные проблем после приобретения продукта, повторяет и уточняет отдельные моменты.</div></div></div></details><details><summary>Клиент высказывает конкретные требования, пожелания и условия.</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Клиент высказывает конкретные требования, пожелания и условия.</div></div></div></details><details><summary>Клиент просит продемонстрировать  продукт еще раз либо испытать его самому.</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Клиент просит продемонстрировать  продукт еще раз либо испытать его самому.</div></div></div></details><details><summary>Клиент привлекает к обсуждению покупки лиц, влияющих на решение о сделке.</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Клиент привлекает к обсуждению покупки лиц, влияющих на решение о сделке.</div></div></div></details><details><summary>Клиент начинает торг о скидках.</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Клиент начинает торг о скидках.</div></div></div></details><details><summary>Или просто говорит что-то вроде: «В целом неплохо», «Это мне нравится», «Пожалуй, то что надо», «Почему бы и нет»</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Или просто говорит что-то вроде: «В целом неплохо», «Это мне нравится», «Пожалуй, то что надо», «Почему бы и нет»</div></div></div></details><details><summary>2. Техники завершения</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Трехкратное &quot;ДА&quot;: — В целом предложение для вас интересное?<br>  — вы могли бы воспользоваться данным решением?<br>  — По стоимости вас все устраивает?<br>  — Отлично, если вам все подходит, тогда я оформляю (документы) сделку</div></div></div></details><details><summary>Вопрос об оплате: — Если вопросов больше нет, тогда скажите пожалуйста ….и далее..<br>  — Как вам удобнее будет произвести оплату?<br>  — Пробуем </summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Вопрос об оплате: — Если вопросов больше нет, тогда скажите пожалуйста ….и далее..<br>  — Как вам удобнее будет произвести оплату?<br>  — Пробуем оформлять рассрочку?<br>  — Будьте добры ваши документы (реквизиты). Я оформлю счет для оплаты.</div></div></div></details><details><summary>выбор без выбора: — вас устроит установка в понедельник после обеда или сразу с утра?<br>  — вы будете оплачивать наличными или каспи ?<br>  — И т</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>выбор без выбора: — вас устроит установка в понедельник после обеда или сразу с утра?<br>  — вы будете оплачивать наличными или каспи ?<br>  — И так, что вы решили? Возьмёте товар X или Y?</div></div></div></details><details><summary>Суммирующее завершение: — Мы говорили о… (одно преимущество). вы увидите, что это дает (второе преимущество). вы так же отметили, что мы (тр</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Суммирующее завершение: — Мы говорили о… (одно преимущество). вы увидите, что это дает (второе преимущество). вы так же отметили, что мы (третье преимущество). И нельзя забывать о том, что (четвертое преимущество). Оформляем?</div></div></div></details><details><summary>3. Предоплата</summary><div class="excel-body"><div class="excel-field"><small>Поле</small><div>Взять предоплату с клиента</div></div></div></details></div></section></main><script src="p0-data.js"></script><script src="p0-app.js"></script>
-<script>
-(function(){
-  document.documentElement.classList.add('oponay-runtime');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce) document.documentElement.classList.add('oponay-reduced-motion');
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OPONAY — Встреча</title>
+<style>
+*{box-sizing:border-box}
+:root{
+  --blue:#1f3a6e;--blue2:#2e5aac;--bg:#f5f7fa;--card:#fff;
+  --line:#e2e8f0;--muted:#5a6472;--soft:#eaf0f9;--green:#1f6f63;
+}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#18202b}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1280px;margin:auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+.brand{font-weight:900;color:var(--blue);font-size:18px}
+.topnav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.topnav a{text-decoration:none;font-weight:700;font-size:13px;color:#536071;padding:9px 11px;border-radius:9px}
+.topnav a:hover,.topnav a.active{background:var(--soft);color:var(--blue)}
+main{max-width:1180px;margin:auto;padding:28px 22px 80px}
+.route{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;display:flex;gap:8px;align-items:center;overflow:auto;white-space:nowrap}
+.route a{text-decoration:none;font-weight:800;font-size:13px;color:#586577;padding:9px 11px;border-radius:9px}
+.route a.active{background:var(--soft);color:var(--blue)}
+.hero{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 36px}
+.kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue2);font-weight:900}
+h1{margin:8px 0 10px;color:var(--blue);font-size:42px;line-height:1.08}
+.lead{margin:0;color:var(--muted);font-size:17px;line-height:1.6;max-width:950px}
+.rule{margin-top:20px;padding:16px 18px;border-left:4px solid var(--blue);background:#f7f9fc;line-height:1.55;font-weight:700}
+.timeline{display:grid;grid-template-columns:repeat(7,1fr);margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.timeline a{text-decoration:none;padding:15px 12px;border-right:1px solid var(--line);font-weight:800;color:#536071;font-size:13px;line-height:1.35}
+.timeline a:last-child{border-right:0}
+.timeline a:hover{background:var(--soft);color:var(--blue)}
+.stage{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stage-head{padding:22px 24px;background:linear-gradient(90deg,#fff,#f7f9fc);border-bottom:1px solid var(--line)}
+.stage-num{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue2);font-weight:900}
+.stage h2{margin:6px 0 4px;color:var(--blue);font-size:26px}
+.stage-sub{margin:0;color:var(--muted);line-height:1.5}
+.body{padding:22px 24px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{border:1px solid var(--line);border-radius:13px;padding:16px;background:#fff}
+.box h3{margin:0 0 8px;color:var(--blue);font-size:15px}
+.box p,.box li{line-height:1.55;margin:0;color:#26313f}
+.box ul{margin:7px 0 0;padding-left:20px}
+.speech{margin-top:12px;padding:15px 16px;background:#f7f9fc;border-radius:12px;border-left:4px solid var(--blue2)}
+.speech b{display:block;margin-bottom:6px;color:var(--blue)}
+.expect{background:#f1f8f6;border-left-color:var(--green)}
+.warn{background:#fff7ed;border-left-color:#b45309}
+.stop{background:#fff1f2;border-left-color:#be123c}
+.next{background:#eef4ff;border-left-color:var(--blue)}
+.step{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:14px}
+.step-title{font-weight:900;color:var(--blue);margin-bottom:8px}
+.flow{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.flow span{padding:8px 10px;background:var(--soft);color:var(--blue);border-radius:999px;font-size:12px;font-weight:800}
+details{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:900;color:var(--blue)}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;font-size:20px}
+details[open] summary:after{content:"−"}
+.detail{padding:0 16px 16px;border-top:1px solid var(--line)}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.price .box{text-align:center}
+.price strong{display:block;font-size:22px;color:var(--blue);margin-bottom:5px}
+.footer-note{margin-top:18px;color:var(--muted);font-size:13px;line-height:1.5}
+@media(max-width:900px){
+  .topbar-inner{align-items:flex-start;flex-direction:column}
+  .topnav{margin-left:0}
+  .timeline{grid-template-columns:1fr}
+  .timeline a{border-right:0;border-bottom:1px solid var(--line)}
+  .grid,.price{grid-template-columns:1fr}
+  h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">OPONAY</div>
+    <nav class="topnav">
+      <a href="index.html">Главная</a>
+      <a href="call.html">Звонок</a>
+      <a href="spin.html">СПИН</a>
+      <a href="spv.html">СПВ</a>
+      <a class="active" href="meeting.html">Встреча</a>
+      <a href="objections.html">Возражения</a>
+      <a href="sales-tool.html">Продажа</a>
+    </nav>
+  </div>
+</header>
 
-  // Current-page marker for any shared step navigation.
-  const here = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('a[href]').forEach(a=>{
-    const raw=(a.getAttribute('href')||'').split('#')[0];
-    if(raw && raw===here) a.classList.add('oponay-current');
-  });
+<main>
+  <div class="route">
+    <a href="index.html">← Академия</a>
+    <a href="call.html">01 Звонок</a>
+    <a href="spin.html">02 СПИН</a>
+    <a href="spv.html">03 СПВ</a>
+    <a class="active" href="meeting.html">04 Встреча</a>
+    <a href="objections.html">05 Возражения</a>
+    <a href="sales-tool.html">06 Продажа</a>
+  </div>
 
-  // Close native details cards when another card in the same group opens.
-  document.querySelectorAll('[data-single-open]').forEach(group=>{
-    group.addEventListener('toggle', e=>{
-      if(!group.open) return;
-      document.querySelectorAll('[data-single-open]').forEach(x=>{
-        if(x!==group) x.removeAttribute('open');
-      });
-    });
-  });
+  <section class="hero">
+    <div class="kicker">OPONAY · МАРШРУТ МЕНЕДЖЕРА</div>
+    <h1>Встреча — полный рабочий маршрут</h1>
+    <p class="lead">Менеджер не идёт по чеклисту ради чеклиста. Он понимает, что сейчас делает, зачем это делает, какой ответ должен получить и только после этого переходит дальше.</p>
+    <div class="rule">Главная логика: контакт → план → диагностика СПИН → подтверждённая боль → соответствующий СПВ → подтверждение ценности → цена → возражение при необходимости → конкретный следующий шаг.</div>
+  </section>
 
-  // Escape closes open details and returns focus to the trigger.
-  document.addEventListener('keydown', e=>{
-    if(e.key!=='Escape') return;
-    const open=[...document.querySelectorAll('details[open]')];
-    if(open.length){ open.forEach(d=>d.removeAttribute('open')); }
-  });
+  <nav class="timeline">
+    <a href="#s1">01<br>Подготовка</a>
+    <a href="#s2">02<br>Приветствие + ТМР</a>
+    <a href="#s3">03<br>Диагностика СПИН</a>
+    <a href="#s4">04<br>Презентация</a>
+    <a href="#s5">05<br>Цена и продажа</a>
+    <a href="#s6">06<br>Возражение</a>
+    <a href="#s7">07<br>Закрытие</a>
+  </nav>
 
-  // External hash navigation should land below sticky header.
-  if(location.hash){
-    requestAnimationFrame(()=>{
-      const el=document.querySelector(location.hash);
-      if(el) el.scrollIntoView({block:'start'});
-    });
-  }
-})();
-</script>
-</body></html>
+  <section class="stage" id="s1">
+    <div class="stage-head">
+      <div class="stage-num">01 · ПОДГОТОВКА</div>
+      <h2>До встречи менеджер должен прийти уже готовым</h2>
+      <p class="stage-sub">Цель — не вспоминать на месте, что показывать и сколько считать, а заранее понимать клиента и иметь всё необходимое для демонстрации.</p>
+    </div>
+    <div class="body">
+      <div class="grid">
+        <div class="box"><h3>Цель этапа</h3><p>Подготовить встречу под конкретный бизнес и не тратить время клиента на технические и организационные вещи.</p></div>
+        <div class="box"><h3>Что используем</h3><p>Договор, материалы для презентации, ноутбук/оборудование, программу с подготовленными товарами клиента, расчёт возможного комплекта.</p></div>
+        <div class="box"><h3>Что проверить</h3><ul><li>заряжен ли ноутбук;</li><li>запускается ли программа;</li><li>добавлены ли товары/категории клиента;</li><li>готова ли демонстрация;</li><li>примерно просчитан комплект с моноблоком и без.</li></ul></div>
+        <div class="box"><h3>Что знать о клиенте</h3><p>Ниша, текущая программа/учёт, количество точек и сотрудников, известные проблемы из звонка, кто принимает решение.</p></div>
+      </div>
+      <div class="speech warn"><b>Что нельзя забыть</b>Не приезжать и только на месте выяснять, что клиент продаёт, чем пользуется и что ему показывать.</div>
+      <div class="speech next"><b>Переходим дальше, когда</b>Всё технически готово, менеджер понимает контекст клиента и знает, какую задачу нужно проверить на встрече.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s2">
+    <div class="stage-head">
+      <div class="stage-num">02 · ПРИВЕТСТВИЕ + ТМР</div>
+      <h2>Знакомство, короткий контакт и рамка встречи</h2>
+      <p class="stage-sub">ТМР нужен не для длинного разговора. Его задача — снять напряжение и спокойно перейти к рабочей части.</p>
+    </div>
+    <div class="body">
+      <div class="grid">
+        <div class="box">
+          <h3>Что говорит менеджер</h3>
+          <div class="speech"><b>Знакомство</b>«Добрый день, [имя]. Меня зовут [имя], компания OPONAY. Мы с вами созванивались по поводу автоматизации, договорились на [время]».</div>
+        </div>
+        <div class="box">
+          <h3>ТМР</h3>
+          <p>Короткий естественный комментарий по ситуации: дорога, погода, магазин, ассортимент, расположение. Не нужно превращать это в отдельный разговор.</p>
+        </div>
+      </div>
+      <div class="speech">
+        <b>Как озвучить план</b>
+        «Чтобы не показывать вам всё подряд, сначала задам несколько вопросов и пойму, как сейчас у вас всё устроено. Потом покажу только то, что может быть полезно именно вам. После этого обсудим условия и ваши вопросы».
+      </div>
+      <div class="speech expect"><b>Что ожидаем от клиента</b>Клиент понимает порядок встречи и согласен сначала пройти диагностику, а потом смотреть решение.</div>
+      <div class="speech stop"><b>Ошибка</b>Сразу открывать программу и начинать перечислять функции до того, как понятно, что клиенту вообще нужно.</div>
+      <div class="speech next"><b>Переходим дальше, когда</b>Контакт установлен, план понятен, клиент готов отвечать на вопросы.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s3">
+    <div class="stage-head">
+      <div class="stage-num">03 · ДИАГНОСТИКА СПИН</div>
+      <h2>Сначала понять ситуацию, потом открывать боль</h2>
+      <p class="stage-sub">СПИН здесь не читается целиком. Менеджер выбирает вопросы по ответам клиента и идёт в ту проблему, которая реально проявилась.</p>
+    </div>
+    <div class="body">
+      <div class="flow">
+        <span>Ситуация</span><span>Проблема</span><span>Последствия</span><span>Наведение</span><span>Резюме боли</span><span>Подтверждение</span>
+      </div>
+
+      <div class="step">
+        <div class="step-title">С — ситуация</div>
+        <p>Понять, как сейчас устроен учёт и работа бизнеса.</p>
+        <div class="speech"><b>Примеры</b>«Как сейчас ведёте учёт?» · «Какой программой пользуетесь?» · «Сколько у вас точек и сотрудников?» · «Как ведёте базу клиентов?» · «Как контролируете остатки?»</div>
+      </div>
+
+      <div class="step">
+        <div class="step-title">П — проблема</div>
+        <p>Найти конкретную сложность, а не придумывать её за клиента.</p>
+        <div class="speech"><b>Примеры</b>«Что сейчас больше всего неудобно?» · «Где чаще всего возникают ошибки?» · «Бывает недостача?» · «Сложно контролировать сотрудников?» · «Бывает, что товар залеживается?»</div>
+      </div>
+
+      <div class="step">
+        <div class="step-title">И — последствия</div>
+        <p>Понять, к чему эта проблема приводит в деньгах, времени, контроле или продажах.</p>
+        <div class="speech"><b>Примеры</b>«Если это будет повторяться, сколько времени/денег вы будете терять?» · «Как это влияет на продажи?» · «Сколько времени уходит на ручной контроль?»</div>
+      </div>
+
+      <div class="step">
+        <div class="step-title">Н — наведение</div>
+        <p>Перевести разговор от проблемы к желаемому результату.</p>
+        <div class="speech"><b>Примеры</b>«Если это убрать, что изменится в вашей работе?» · «Куда вы сможете направить освободившееся время?» · «Что для вас будет означать нормальный контроль этого процесса?»</div>
+      </div>
+
+      <div class="speech expect"><b>Что должно быть услышано от клиента</b>Конкретная проблема + её последствие + понимание, что клиенту нужен другой результат.</div>
+      <div class="speech"><b>Резюме менеджера</b>«Правильно понимаю: сейчас у вас [конкретная проблема], из-за этого [последствие], и для вас важно [желаемый результат]?»</div>
+      <div class="speech next"><b>Переходим в СПВ только когда</b>Клиент подтвердил резюме. Если боль не подтверждена — не начинаем презентацию.</div>
+      <div class="speech stop"><b>Не допускать</b>Не задавать 15 вопросов подряд ради самого СПИН. Не подсказывать клиенту «правильную» боль. Не переходить к функции после первого же ответа без понимания последствий.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s4">
+    <div class="stage-head">
+      <div class="stage-num">04 · ПРЕЗЕНТАЦИЯ</div>
+      <h2>Показываем не программу целиком, а решение конкретной боли</h2>
+      <p class="stage-sub">Связка должна быть прямой: услышали боль → выбрали соответствующий блок СПВ → показали функцию → объяснили изменение → показали выгоду → проверили реакцию.</p>
+    </div>
+    <div class="body">
+      <div class="flow">
+        <span>Подтверждённая боль</span><span>Свойство</span><span>Преимущество</span><span>Выгода</span><span>Ключевая ценность</span><span>Проверка реакции</span>
+      </div>
+
+      <div class="grid">
+        <div class="box"><h3>Если боль — остатки</h3><p>Показываем соответствующий функционал по остаткам, размерам/цветам или просмотру наличия. Не просто «у нас есть функция», а что клиент сможет контролировать.</p></div>
+        <div class="box"><h3>Если боль — сотрудники</h3><p>Показываем продажи сотрудников, расчёт зарплаты/мотивации и связь с контролем результата.</p></div>
+        <div class="box"><h3>Если боль — клиенты</h3><p>Показываем клиентскую базу и инструменты лояльности как решение задачи повторных продаж и удержания.</p></div>
+        <div class="box"><h3>Если боль — удалённый контроль</h3><p>Показываем нужный способ просмотра данных и связываем его с экономией времени собственника.</p></div>
+      </div>
+
+      <div class="speech">
+        <b>Как говорить</b>
+        «Вы сказали, что у вас сейчас проблема с [боль]. Покажу именно этот момент. Здесь [свойство]. Для вас это значит [преимущество]. В итоге вы получаете [конкретная выгода]».
+      </div>
+      <div class="speech">
+        <b>Проверка после показа</b>
+        «Как вам это?» · «Это решает ту проблему, о которой вы говорили?» · «Насколько для вас это полезно?»
+      </div>
+      <div class="speech expect"><b>Что фиксируем</b>Какие функции клиенту реально понравились и какая выгода для него важнее всего.</div>
+      <div class="speech stop"><b>Ошибка</b>Не показывать всё подряд. Не перечислять функции без связи с болью. Не использовать сложные литературные формулировки — менеджер должен говорить так, как реально говорит с предпринимателем.</div>
+      <div class="speech next"><b>Переходим дальше, когда</b>Основная подтверждённая боль закрыта, клиент видит ценность решения и дал нормальную реакцию на показ.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s5">
+    <div class="stage-head">
+      <div class="stage-num">05 · ЦЕНА И ПРОДАЖА</div>
+      <h2>Цена появляется после ценности, а не вместо неё</h2>
+      <p class="stage-sub">Перед ценой менеджер коротко собирает результат, который уже подтвердил клиент.</p>
+    </div>
+    <div class="body">
+      <div class="speech">
+        <b>Предзакрытие</b>
+        «Итак, [имя], я показал вам основные моменты. Как вам?»<br>
+        «На сколько по 10-балльной шкале вам зашло то, что я показал?»<br>
+        Если не 10: «Чего не хватило, чтобы поставить твёрдую 10?»
+      </div>
+
+      <div class="speech">
+        <b>Ключевая ценность</b>
+        «Получается, для вас главное — [подтверждённая выгода]. Плюс мы решаем [вторая боль], и за счёт этого вы получаете [результат].»
+      </div>
+
+      <div class="price">
+        <div class="box"><strong>387 000 ₸</strong>программа + полный комплект оборудования</div>
+        <div class="box"><strong>234 300 ₸</strong>программа + комплект без моноблока</div>
+        <div class="box"><strong>140 000 ₸</strong>программа с установкой и обучением</div>
+      </div>
+      <p class="footer-note">Цены выше взяты из исходного материала встречи. Перед использованием менеджер должен сверять актуальный прайс.</p>
+
+      <div class="speech">
+        <b>Продающий вопрос</b>
+        «Вам удобнее наличными или в рассрочку?» · «На когда можем поставить установку?» · «Оформляемся?»
+      </div>
+      <div class="speech expect"><b>Что ожидаем</b>Либо согласие/готовность к оформлению, либо конкретное сомнение, которое нужно разобрать.</div>
+      <div class="speech next"><b>Переходим в возражение, когда</b>Клиент не идёт дальше из-за конкретного сомнения: цена, условия, программа, сравнение, время, необходимость подумать и т.п.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s6">
+    <div class="stage-head">
+      <div class="stage-num">06 · ВОЗРАЖЕНИЕ</div>
+      <h2>Не спорим — сначала понимаем, что именно мешает купить</h2>
+      <p class="stage-sub">Возражения — отдельный модуль. На встрече менеджер не уходит в случайную реплику: сначала определяет реальную причину, затем открывает соответствующую карточку возражения.</p>
+    </div>
+    <div class="body">
+      <div class="step">
+        <div class="step-title">1. Уточнить</div>
+        <div class="speech">«Правильно понимаю, вас сейчас останавливает именно [причина]?»</div>
+      </div>
+      <div class="step">
+        <div class="step-title">2. Выбрать карточку</div>
+        <p>Открываем именно то возражение, которое совпадает с причиной клиента. Не читаем все возражения подряд.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">3. Отработать</div>
+        <p>Коротко отвечаем, возвращаемся к фактам и к той ценности, которую клиент уже подтвердил.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">4. Проверить</div>
+        <div class="speech">«Если этот момент решаем, остались ещё вопросы?»</div>
+      </div>
+      <div class="speech stop"><b>Не допускать</b>Не спорить с клиентом. Не обесценивать его текущую программу. Не выдавать длинную заученную речь, если клиент задал один конкретный вопрос. Не переходить к новой скидке, пока не понятно настоящее возражение.</div>
+      <div class="speech next"><b>Переходим к закрытию, когда</b>Возражение действительно снято и клиент снова готов обсуждать оформление.</div>
+    </div>
+  </section>
+
+  <section class="stage" id="s7">
+    <div class="stage-head">
+      <div class="stage-num">07 · ЗАКРЫТИЕ</div>
+      <h2>Закрытие = конкретная договорённость</h2>
+      <p class="stage-sub">Не заканчиваем встречу фразой «ну тогда подумайте». Следующий шаг должен быть конкретным.</p>
+    </div>
+    <div class="body">
+      <div class="grid">
+        <div class="box">
+          <h3>Сигналы готовности</h3>
+          <ul>
+            <li>клиент задаёт конкретные вопросы об условиях;</li>
+            <li>просит повторно показать продукт;</li>
+            <li>подключает человека, который влияет на решение;</li>
+            <li>обсуждает скидку или способ оплаты;</li>
+            <li>говорит, что предложение подходит.</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Как закрывать</h3>
+          <div class="speech">«Если вопросов больше нет, давайте оформим».<br>«Как удобнее оплатить?»<br>«На когда ставим установку?»</div>
+        </div>
+      </div>
+
+      <details>
+        <summary>Техника «три да» — из исходного материала</summary>
+        <div class="detail">
+          <div class="speech">«В целом предложение для вас интересное?»</div>
+          <div class="speech">«Вы могли бы воспользоваться этим решением?»</div>
+          <div class="speech">«По стоимости вас всё устраивает?»</div>
+          <div class="speech expect">После подтверждения: «Отлично, тогда оформляем документы».</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Выбор без выбора — из исходного материала</summary>
+        <div class="detail">
+          <div class="speech">«Вас устроит установка в понедельник после обеда или утром?»</div>
+          <div class="speech">«Будете оплачивать наличными или Kaspi?»</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Суммирующее завершение — из исходного материала</summary>
+        <div class="detail">
+          <div class="speech">«Мы говорили о [первое преимущество]. Вы отметили, что это даёт [второй результат]. Ещё для вас важно [третья ценность]. Давайте оформим?»</div>
+        </div>
+      </details>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="box"><h3>Что фиксируем</h3><p>Договор, способ оплаты, дату установки, необходимые данные, кто участвует в дальнейшем решении.</p></div>
+        <div class="box"><h3>После сделки</h3><p>По исходному материалу: внести данные клиента в AmoCRM, заполнить отчётность и организовать дальнейшее сопровождение.</p></div>
+      </div>
+
+      <div class="speech next"><b>Финальный результат встречи</b>Есть либо оформленная сделка, либо конкретный следующий шаг с датой, ответственным и понятным условием перехода.</div>
+    </div>
+  </section>
+
+  <section class="stage">
+    <div class="stage-head">
+      <div class="stage-num">КОНТРОЛЬ МЕНЕДЖЕРА</div>
+      <h2>Перед переходом на следующий этап задай себе один вопрос</h2>
+    </div>
+    <div class="body">
+      <div class="flow">
+        <span>Я понял ситуацию?</span>
+        <span>Клиент назвал проблему?</span>
+        <span>Я понял последствия?</span>
+        <span>Клиент подтвердил боль?</span>
+        <span>Я показал именно это?</span>
+        <span>Клиент увидел ценность?</span>
+        <span>Я понял причину сомнения?</span>
+        <span>Следующий шаг конкретный?</span>
+      </div>
+      <div class="rule">Если на предыдущий вопрос нет ответа — не перескакиваем дальше. Возвращаемся на один шаг назад и закрываем пробел.</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
